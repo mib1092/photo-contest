@@ -6,4 +6,13 @@ jQuery(document).ready(function($) {
         easing: 'easeInQuad', // Easing pattern to use
         offset: 50 // Integer. How far to offset the scrolling anchor location in pixels
     });
+
+    // $(window).on('load', function() {
+    //     var slider = $('.swiper-container');
+    //
+    //     setTimeout(function () {
+    //         $('.swiper-container').addClass('custom-width');
+    //         console.log('ADD class')
+    //     }, 2000)
+    // });
 });

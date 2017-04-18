@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Photo Contest</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://photo-contest.cwponline.imcrs.com/cassette.axd/stylesheet/ClQey9TwTGbmdySHtKbOR58g00g=/includes/css/site.css" rel="stylesheet">
+    <!--<link href="css/site.css" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <!--[if IE]>
     <link href="http://photo-contest.cwponline.imcrs.com/cassette.axd/stylesheet/QYDdH8uh3SSoulF_KTKCWZ_k1Y4=/includes/css/ie-all.css" type="text/css" rel="stylesheet"/>
@@ -16,7 +19,9 @@
 </head>
 
 <body>
-    <div class="footerSlide">&nbsp;</div>
+    <div class="footerSlide">
+
+    </div>
     <div class="fullWrap bodyWrapper">
         <div class="headerWrap">
             <div class="center">
@@ -78,7 +83,108 @@
             </div>
         </div>
 
-        <p>Content Here</p>
+        <div class="main-slider">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('img/blackKitchen.jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('img/woodSanding.jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('img/gangConstruction.jpg');"></div>
+                </div>
+                <!-- Add Pagination -->
+                <!--<div class="swiper-pagination"></div>-->
+
+                <!-- Add navigation buttons -->
+                <!--<div class="swiper-button-prev swiper-button-black"></div>-->
+                <!--<div class="swiper-button-next swiper-button-black"></div>-->
+                <div class="sw-content">
+                    <h2 class="banner-title"><span>2017</span>
+                        Design
+                        Inspiration
+                        Awards</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-awards">
+            <div class="container">
+                <ul class="awards-list">
+                    <li class="awards-desc-box">
+                        <h2 class="section-title">Prizes & Awards</h2>
+                        <div class="awards-desc-wap">
+                            <p>
+                                Winners across three categories will receive an award trophy as well as prime placement in a special edition coffee table book and on the Custom Wood Products website, social media, materials and more.
+                            </p>
+                        </div>
+                        <div class="awards-big-text-desc-wap">
+                            <p>Gold and silver awards in 3 categoriesInclusion in a special coffee table book
+                                Placement on our website, and materials
+                            </p>
+                            <br>
+                            <br>
+                        </div>
+                    </li>
+                    <li class="awards-img-box">
+                        <div class="awards-img-wrap">
+                            <img src="img/award.png">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-how-to-enter">
+         <div class="container">
+             <h2 class="section-title">How To Enter</h2>
+             <ul class="how-to-list">
+                 <li>
+                     <div class="how-box">
+                        <h3 class="how-title">Is entering easy?</h3>
+                         <p>
+                             Yes! Entering takes just a few minutes. Just
+                             go to our <a href="#" >submission page</a> to start your first
+                             entry today.</p>
+                     </div>
+                 </li>
+                 <li>
+                     <div class="how-box">
+                        <h3 class="how-title">How does it work?</h3>
+                         <p>
+                             Dealers and designers who work with Custom Wood Products are invited to enter their work. Winners across 3 categories will receive an award plus prime placement on our website and in a special coffee table book, and more.</p>
+                     </div>
+                 </li>
+                 <li>
+                     <div class="how-box">
+                        <h3 class="how-title">How many projects can i enter?</h3>
+                         <p>
+                             As many as you’d like! Create a separate entry for each project you’d like to submit, and include as many photos as you wish. You may enter multiple jobs, just enter them one at a time.</p>
+                     </div>
+                 </li>
+                 <li>
+                     <div class="how-box">
+                        <h3 class="how-title">Who’s judging?</h3>
+                         <p>
+                             We have brought together a <a href="#">panel of judges</a> with deep woodworking, custom cabinetry and design expertise.  </p>
+                     </div>
+                 </li>
+                 <li>
+                     <div class="how-box">
+                        <h3 class="how-title">How do i enter?</h3>
+                         <p>
+                             Simply drag-and-drop photos of the job you’d like to enter into the field on our <a href="#">submissions page</a> fill in the required information, and
+                             submit your entry.</p>
+                     </div>
+                 </li>
+                 <li>
+                     <a href="#" class="btn-free-entry">
+                         Free Entry
+                         <span>Deadline: July 31, 2017</span>
+                     </a>
+                 </li>
+             </ul>
+         </div>
+        </div>
+
         <div class="footerWrap">
             <div class="center">
                 <div class="footerBadges">
@@ -177,14 +283,40 @@
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            //pagination: '.swiper-pagination',
+            slidesPerView: 'auto',
+            //paginationClickable: true,
+            spaceBetween: 0
+        });
+
+        $(window).on('load', function() {
+            var slider = $('.swiper-container'),
+                header = $('.headerWrap').height(),
+                winHeight = $(window).height(),
+                sliderHeight = winHeight - header;
+
+
+                slider.height(sliderHeight);
+            setTimeout(function () {
+                $('.swiper-container').addClass('custom-width');
+                console.log('ADD class')
+            }, 2000)
+        });
+    </script>
+
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/scripts.js"></script>
     <script type="text/javascript">
         if(!window.jQuery){
             document.write('<script src="http://photo-contest.cwponline.imcrs.com/cassette.axd/script/jZHRniBJK2IUL2UZSKJKwicnrmk=/includes/js/jquery.js" type="text/javascript"><\/script>');
         }
     </script>
-    <script src="http://photo-contest.cwponline.imcrs.com/cassette.axd/script/_D72gySdbt_BcQVy1UkofzK1g34=/includes/js/eui" type="text/javascript"></script>
+    <script src="js/eui"></script>
+    <!--<script src="http://photo-contest.cwponline.imcrs.com/cassette.axd/script/_D72gySdbt_BcQVy1UkofzK1g34=/includes/js/eui" type="text/javascript"></script>-->
 
-	<script src="js/smooth-scroll.min.js"></script>
-    <script src="js/scripts.js"></script>
 </body>
 </html>
