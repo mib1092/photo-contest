@@ -113,15 +113,13 @@
                         <h2 class="section-title">Prizes & Awards</h2>
                         <div class="awards-desc-wap">
                             <p>
-                                Winners across three categories will receive an award trophy as well as prime placement in a special edition coffee table book and on the Custom Wood Products website, social media, materials and more.
-                            </p>
+                                Winners across three categories will receive an award trophy as well as prime placement in a special
+                                edition coffee table book and on the Custom Wood Products website, social media, materials and more.</p>
                         </div>
                         <div class="awards-big-text-desc-wap">
-                            <p>Gold and silver awards in 3 categoriesInclusion in a special coffee table book
-                                Placement on our website, and materials
-                            </p>
-                            <br>
-                            <br>
+                            <p>Gold and silver awards in 3 categories</p>
+                            <p>Inclusion in a special coffee table book</p>
+                            <p>Placement on our website, and materials</p>
                         </div>
                     </li>
                     <li class="awards-img-box">
@@ -283,30 +281,6 @@
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            //pagination: '.swiper-pagination',
-            slidesPerView: 'auto',
-            //paginationClickable: true,
-            spaceBetween: 0
-        });
-
-        $(window).on('load', function() {
-            var slider = $('.swiper-container'),
-                header = $('.headerWrap').height(),
-                winHeight = $(window).height(),
-                sliderHeight = winHeight - header;
-
-
-                slider.height(sliderHeight);
-            setTimeout(function () {
-                $('.swiper-container').addClass('custom-width');
-                console.log('ADD class')
-            }, 2000)
-        });
-    </script>
 
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -317,6 +291,32 @@
     </script>
     <script src="js/eui"></script>
     <!--<script src="http://photo-contest.cwponline.imcrs.com/cassette.axd/script/_D72gySdbt_BcQVy1UkofzK1g34=/includes/js/eui" type="text/javascript"></script>-->
+
+    <!-- Initialize Swiper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            //pagination: '.swiper-pagination',
+            slidesPerView: 'auto',
+            //paginationClickable: true,
+            spaceBetween: 0
+        });
+
+        jQuery(document).ready( function($) {
+            $(window).on('load resize', function() {
+                var slider          = $('.swiper-container'),
+                    headerHeight    = $('.headerWrap').outerHeight(),
+                    winHeight       = $(window).height(),
+                    sliderHeight    = winHeight - headerHeight;
+
+                slider.height(sliderHeight);
+
+                setTimeout(function () {
+                    slider.addClass('custom-width');
+                }, 2000);
+            });
+        });
+    </script>
 
 </body>
 </html>
