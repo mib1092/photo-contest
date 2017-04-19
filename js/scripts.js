@@ -7,12 +7,17 @@ jQuery(document).ready(function($) {
         offset: 0 // Integer. How far to offset the scrolling anchor location in pixels
     });
 
-    // $(window).on('load', function() {
-    //     var slider = $('.swiper-container');
-    //
-    //     setTimeout(function () {
-    //         $('.swiper-container').addClass('custom-width');
-    //         console.log('ADD class')
-    //     }, 2000)
-    // });
+    // for slider fullscreen display
+    $(window).on('load resize', function() {
+        var slider          = $('.swiper-container'),
+            headerHeight    = $('.headerWrap').outerHeight(),
+            winHeight       = $(window).height(),
+            sliderHeight    = winHeight - headerHeight;
+
+        slider.height(sliderHeight);
+
+        setTimeout(function () {
+            slider.addClass('custom-width');
+        }, 2000);
+    });
 });

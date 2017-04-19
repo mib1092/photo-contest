@@ -111,7 +111,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a data-scroll href="#awards">
+                                <a data-scroll href="#prizes-awards">
                                     Prizes & Awards
                                     <span>web placement, publications & trophies</span>
                                 </a>
@@ -128,15 +128,14 @@
             </div>
         </div>
 
-        <div class="section-awards" id="awards">
+        <div class="section-awards" id="prizes-awards">
             <div class="container">
                 <ul class="awards-list">
                     <li class="awards-desc-box">
                         <h2 class="section-title">Prizes & Awards</h2>
                         <div class="awards-desc-wap">
-                            <p>
-                                Winners across three categories will receive an award trophy as well as prime placement in a special
-                                edition coffee table book and on the Custom Wood Products website, social media, materials and more.</p>
+                            <p>Winners across three categories will receive award statuettes as well as prime placement in a special
+                                edition coffee table book and on the Custom Wood Products website, social media and materials.</p>
                         </div>
                         <div class="awards-big-text-desc-wap">
                             <p>Gold and silver awards in 3 categories</p>
@@ -146,7 +145,7 @@
                     </li>
                     <li class="awards-img-box">
                         <div class="awards-img-wrap">
-                            <img src="img/award.png">
+                            <img src="img/award.png" alt="Prizes & Awards">
                         </div>
                     </li>
                 </ul>
@@ -160,39 +159,35 @@
                  <li>
                      <div class="how-box">
                         <h3 class="how-title">Is entering easy?</h3>
-                         <p>
-                             Yes! Entering takes just a few minutes. Just
-                             go to our <a href="#" >submission page</a> to start your first
-                             entry today.</p>
+                        <p>Yes! Entering takes just a few minutes.
+                            Just go to our <a href="submit.html">submission page</a> to start your first entry today.</p>
                      </div>
                  </li>
                  <li>
                      <div class="how-box">
                         <h3 class="how-title">How does it work?</h3>
-                         <p>
-                             Dealers and designers who work with Custom Wood Products are invited to enter their work. Winners across 3 categories will receive an award plus prime placement on our website and in a special coffee table book, and more.</p>
+                        <p>Dealers and designers who work with Custom Wood Products are invited to enter their work.
+                            Winners across 3 categories will receive an award plus prime placement on our website and in a special coffee table book, and more.</p>
                      </div>
                  </li>
                  <li>
                      <div class="how-box">
-                        <h3 class="how-title">How many projects can i enter?</h3>
-                         <p>
-                             As many as you’d like! Create a separate entry for each project you’d like to submit, and include as many photos as you wish. You may enter multiple jobs, just enter them one at a time.</p>
+                        <h3 class="how-title">How many projects can I enter?</h3>
+                        <p>As many as you’d like! Create a separate entry for each project you’d like to submit, and include
+                            as many photos as you’d wish. You may enter multiple jobs, just enter them one at a time.</p>
                      </div>
                  </li>
                  <li>
                      <div class="how-box">
                         <h3 class="how-title">Who’s judging?</h3>
-                         <p>
-                             We have brought together a <a href="#">panel of judges</a> with deep woodworking, custom cabinetry and design expertise.  </p>
+                         <p>We have brought together a <a href="#">panel of judges</a> with a deep woodworking, custom cabinetry and design expertise.</p>
                      </div>
                  </li>
                  <li>
                      <div class="how-box">
-                        <h3 class="how-title">How do i enter?</h3>
-                         <p>
-                             Simply drag-and-drop photos of the job you’d like to enter into the field on our <a href="#">submissions page</a> fill in the required information, and
-                             submit your entry.</p>
+                        <h3 class="how-title">How do I enter?</h3>
+                         <p>Simply drag-and-drop photos of the job you’d like to enter into the field on our
+                             <a href="submit.html">submission page</a>, fill in the required information, and submit your entry.</p>
                      </div>
                  </li>
                  <li>
@@ -324,22 +319,8 @@
             slidesPerView: 'auto',
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
-            spaceBetween: 0
-        });
-
-        jQuery(document).ready( function($) {
-            $(window).on('load resize', function() {
-                var slider          = $('.swiper-container'),
-                    headerHeight    = $('.headerWrap').outerHeight(),
-                    winHeight       = $(window).height(),
-                    sliderHeight    = winHeight - headerHeight;
-
-                slider.height(sliderHeight);
-
-                setTimeout(function () {
-                    slider.addClass('custom-width');
-                }, 2000);
-            });
+            spaceBetween: 0,
+            loop: true
         });
     </script>
 

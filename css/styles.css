@@ -109,13 +109,13 @@ a.btn-free-entry:hover,
                 font-size: 35px;
                 letter-spacing: -2px;
                 color: #fff;
-                background-color: rgba(0, 0, 0, 0.3);
+                background-color: rgba(0, 0, 0, 0.62);
                 text-decoration: none;
                 -webkit-transition: all .25s ease-out;
                 transition: all .25s ease-out;
             }
             .banner-nav-list > li > a:hover {
-                background-color: rgba(0, 0, 0, 0.7);
+                background-color: rgba(0, 0, 0, 0.8);
             }
             .banner-nav-list > li > a:before {
                 position: absolute;
@@ -229,7 +229,7 @@ a.btn-free-entry:hover,
             }
 .section-how-to-enter {
     padding-top: 70px;
-    padding-bottom: 95px;
+    padding-bottom: 70px;
 }
 .section-how-to-enter * {
     -webkit-box-sizing: border-box;
@@ -306,7 +306,9 @@ a.btn-free-entry:hover,
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    height: 100vh;
+    height: -moz-calc(100vh - 112px);
+    height: -webkit-calc(100vh - 112px);
+    height: calc(100vh - 112px);
     min-height: 400px;
     width: 100%;
     background-repeat: no-repeat;
@@ -317,10 +319,14 @@ a.btn-free-entry:hover,
     transition-duration: 0.5s;
 }
 .custom-width .swiper-slide:first-child {
+    width: -moz-calc(100% - 200px);
+    width: -webkit-calc(100% - 200px);
     width: calc(100% - 200px);
 }
 .custom-width .swiper-slide:last-child {
-    /*width: calc(100% + 200px);*/
+    width: -moz-calc(100% + 200px);
+    width: -webkit-calc(100% + 200px);
+    width: calc(100% + 200px);
 }
 .swiper-button-next, .swiper-button-prev {
     z-index: 99999;
