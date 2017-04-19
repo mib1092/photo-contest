@@ -39,7 +39,7 @@ jQuery(document).ready(function($) {
         $(this).fadeOut(500);
     });
 
-    //for dropzone
+    // for dropzone
     $("#my-awesome-dropzone").dropzone({
         url: "/file-upload"
     });

@@ -614,6 +614,7 @@ a.btn-free-entry:hover,
     cursor:pointer;
     color: #a7a7a7;
     background: #ffffff;
+    border: 1px solid #c3c3c3;
 }
 
 .select-wrap { position:relative; }
@@ -653,7 +654,6 @@ a.btn-free-entry:hover,
     border: 1px solid #c3c3c3;
 }
 .row-wrap textarea::-webkit-input-placeholder {
-    max-width: 400px;
     font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
     color: #9f9f9f;
     font-weight: 400;
@@ -664,7 +664,6 @@ a.btn-free-entry:hover,
     transition: 0.25s;
 }
 .row-wrap textarea::-moz-placeholder {
-    max-width: 400px;
     font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
     color: #9f9f9f;
     font-weight: 400;
@@ -675,7 +674,6 @@ a.btn-free-entry:hover,
     transition: 0.25s;
 }
 .row-wrap textarea:-ms-input-placeholder {
-    max-width: 400px;
     font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
     color: #9f9f9f;
     font-weight: 400;
@@ -686,7 +684,6 @@ a.btn-free-entry:hover,
     transition: 0.25s;
 }
 .row-wrap textarea:-moz-placeholder {
-    max-width: 400px;
     font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
     color: #9f9f9f;
     font-weight: 400;
