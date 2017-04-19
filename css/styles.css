@@ -10,25 +10,26 @@ a.btn-free-entry, .btn-free-entry {
     max-width: 290px;
     margin: 0 auto;
     width: 100%;
-    padding: 34px 70px 34px 45px;
+    padding: 32px 70px 28px 45px;
     color: #fff;
     font-family: 'BodoniBT-Book','Bodoni Bk BT','Bodoni MT',Didot,'Didot LT STD','Hoefler Text',Garamond,'Times New Roman',serif;
     font-size: 30.5px;
     text-align: left;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #272727;
     -webkit-transition: all .25s ease-out;
     transition: all .25s ease-out;
 }
 a.btn-free-entry span,
 .btn-free-entry span {
-        display: block;
-        margin-top: 2px;
-        font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        text-transform: uppercase;
-    }
+    display: block;
+    margin-top: 2px;
+    font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 a.btn-free-entry:after,
 .btn-free-entry:after {
     position: absolute;
@@ -47,7 +48,7 @@ a.btn-free-entry:after,
 }
 a.btn-free-entry:hover,
 .btn-free-entry:hover {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: #000000;
 }
 
 /*-------------------------------------CONTENT--------------------------------------*/
@@ -71,7 +72,7 @@ a.btn-free-entry:hover,
             font-size: 70px;
         }
 .section-awards {
-    padding-top: 100px;
+    padding-top: 94px;
     padding-bottom: 40px;
 }
     .section-awards * {
@@ -80,9 +81,10 @@ a.btn-free-entry:hover,
         box-sizing: border-box;
     }
         .section-awards .section-title {
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             padding-bottom: 0;
             text-align: left;
+            letter-spacing: -0.5px;
         }
         .awards-list {
             outline:none;
@@ -94,19 +96,22 @@ a.btn-free-entry:hover,
             .awards-list > li {
                 display: table-cell;
                 padding: 5px 5px;
-                vertical-align: middle;
+                vertical-align: top;
             }
                 .awards-list li.awards-desc-box{
                     width: 31.6%;
+                    padding-top: 115px;
                 }
                 .awards-list li.awards-img-box{
                     width: 68.4%;
                 }
                     .awards-img-wrap {
-                        padding-left: 70px;
+                        padding-left: 57px;
                     }
                         .awards-img-wrap img {
                             max-width: 100%;
+                            width: auto;
+                            height: auto;
                         }
         .awards-desc-wap {
             margin-bottom: 48px;
@@ -118,9 +123,13 @@ a.btn-free-entry:hover,
             font-weight: 600;
             color: #000;
         }
+            .awards-big-text-desc-wap p {
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
 .section-how-to-enter {
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 95px;
 }
 .section-how-to-enter * {
     -webkit-box-sizing: border-box;
@@ -128,15 +137,17 @@ a.btn-free-entry:hover,
     box-sizing: border-box;
 }
     .section-title {
-        margin-bottom: 48px;
+        margin-bottom: 32px;
         font-size: 62px;
         text-align: center;
         color: #272727;
         letter-spacing: -3px;
         line-height: 1;
+        font-weight: 500;
     }
     .how-to-list {
-        margin-left: 0;
+        margin: 0 auto;
+        max-width: 1220px;
         text-align: center;
     }
         .how-to-list > li {
@@ -170,12 +181,15 @@ a.btn-free-entry:hover,
                     margin-bottom: 0;
                 }
             .how-title {
-                margin-bottom: 3px;
+                margin-bottom: 4px;
                 padding-bottom: 0;
                 font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
                 font-size: 20px;
                 font-weight: 700;
                 text-transform: uppercase;
+            }
+            .how-to-list > li .btn-free-entry {
+                margin-top: 9px;
             }
 
 /*-------------------------------------SLIDER---------------------------------------*/
