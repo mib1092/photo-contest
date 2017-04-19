@@ -749,6 +749,7 @@ a.btn-free-entry:hover,
     }
 
 .drop-box {
+    position: relative;
     padding: 55px 20px 33px;
     border: 2px dashed #c1c1c1;
     text-align: center;
@@ -782,12 +783,43 @@ a.btn-free-entry:hover,
         -webkit-transition: all .25s ease-out;
         transition: all .25s ease-out;
     }
-    .drop-box:hover {
-        border-color: #000;
+    .drop-box-hover {
+        display: none;
+        position: absolute;
+        z-index: 9999;
+        left: -2px;
+        top: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        background-color: rgba(0, 0, 0, 0.9);
+        -webkit-transition: all .25s linear;
+        transition: all .25s linear;
+        pointer-events: none;
     }
-    .drop-box:hover .defaultSubmit {
-        background-color: #000;
+        .drop-box-hover span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 1;
+            letter-spacing: 1px;
+            color: #fff;
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    /*.drop-box:hover {*/
+        /*border-color: #000;*/
+    /*}*/
+    .drop-box:hover .drop-box-hover {
+        display: block;
     }
+    /*.drop-box:hover .defaultSubmit {*/
+        /*background-color: #000;*/
+    /*}*/
 .drop-warring {
     margin-top: 8px;
     margin-bottom: 36px;
@@ -938,3 +970,39 @@ a.btn-free-entry:hover,
                     margin: 0 auto;
                     text-align: center;
                 }
+.mobileBodyWrapper .submit-block {
+    padding-top: 24px;
+    padding-bottom: 30px;
+}
+    .mobileBodyWrapper .row-list {
+        margin-left: 0;
+    }
+    .mobileBodyWrapper .two-row .row-list {
+        max-width: 100%;
+    }
+    .mobileBodyWrapper .row-list > li,
+    .mobileBodyWrapper .address .row-list > li:first-child {
+        padding: 0;
+        width: 100%;
+    }
+    .mobileBodyWrapper .row-list > li {
+        margin-bottom: 8px;
+    }
+    .mobileBodyWrapper .row-list > li:last-child {
+        margin-bottom: 0;
+    }
+        .mobileBodyWrapper .drop-box:hover {
+            border-color: #000;
+        }
+        .mobileBodyWrapper .drop-box:hover .drop-box-hover {
+            display: none;
+        }
+        .mobileBodyWrapper .drop-box:hover .defaultSubmit {
+            background-color: #000;
+        }
+        .mobileBodyWrapper .submit-block .section-title {
+            margin-bottom: 24px;
+        }
+        .mobileBodyWrapper .drop-desc {
+            font-size: 22px;
+        }
