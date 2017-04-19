@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Photo Contest</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,700' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://photo-contest.cwponline.imcrs.com/cassette.axd/stylesheet/ClQey9TwTGbmdySHtKbOR58g00g=/includes/css/site.css" rel="stylesheet">
     <!--<link href="css/site.css" rel="stylesheet" type="text/css">-->
@@ -95,18 +95,41 @@
                 <!--<div class="swiper-pagination"></div>-->
 
                 <!-- Add navigation buttons -->
-                <!--<div class="swiper-button-prev swiper-button-black"></div>-->
-                <!--<div class="swiper-button-next swiper-button-black"></div>-->
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
                 <div class="sw-content">
-                    <h2 class="banner-title"><span>2017</span>
-                        Design
-                        Inspiration
-                        Awards</h2>
+                    <div class="container">
+                        <h2 class="banner-title"><span>2017</span>
+                            Design
+                            Inspiration
+                            Awards
+                        </h2>
+                        <ul class="banner-nav-list">
+                            <li>
+                                <a href="#" class="btn-free-entry">
+                                    Free Entry
+                                    <span>Deadline: July 31, 2017</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-scroll href="#awards">
+                                    Prizes & Awards
+                                    <span>web placement, publications & trophies</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-scroll href="#how-to-enter">
+                                    How to Enter
+                                    <span> Entry instructions, Judges & MORE</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="section-awards">
+        <div class="section-awards" id="awards">
             <div class="container">
                 <ul class="awards-list">
                     <li class="awards-desc-box">
@@ -131,7 +154,7 @@
             </div>
         </div>
 
-        <div class="section-how-to-enter">
+        <div class="section-how-to-enter" id="how-to-enter">
          <div class="container">
              <h2 class="section-title">How To Enter</h2>
              <ul class="how-to-list">
@@ -297,8 +320,10 @@
     <script>
         var swiper = new Swiper('.swiper-container', {
             //pagination: '.swiper-pagination',
-            slidesPerView: 'auto',
             //paginationClickable: true,
+            slidesPerView: 'auto',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
             spaceBetween: 0
         });
 

@@ -55,22 +55,121 @@ a.btn-free-entry:hover,
 .sw-content {
     position: absolute;
     left: 0;
-    top: 0;
+    bottom: 0;
+    width: 100%;
     z-index: 999;
     color: #fff;
 }
+    .sw-content * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .sw-content .container {
+        position: relative;
+    }
     .banner-title {
         max-width: 590px;
         font-family: 'BodoniBT-Book','Bodoni Bk BT','Bodoni MT',Didot,'Didot LT STD','Hoefler Text',Garamond,'Times New Roman',serif;
         font-size: 140px;
-        line-height: 1;
+        line-height: 0.93;
         color: #ffffff;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
     }
         .banner-title span {
             display: block;
             font-size: 70px;
+            margin-bottom: 10px;
         }
+    .banner-nav-list {
+        max-width: 1120px;
+        width: 100%;
+        outline:none;
+        list-style:none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+        .banner-nav-list > li {
+            float: left;
+            width: 35%;
+            text-align: center;
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .banner-nav-list > li:first-child {
+            width: 30%;
+        }
+        .banner-nav-list > li:last-child {
+            border-right: none;
+        }
+            .banner-nav-list > li > a {
+                position: relative;
+                display: block;
+                padding: 32px 20px 43px;
+                font-family: 'BodoniBT-Book','Bodoni Bk BT','Bodoni MT',Didot,'Didot LT STD','Hoefler Text',Garamond,'Times New Roman',serif;
+                font-size: 35px;
+                letter-spacing: -2px;
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.3);
+                text-decoration: none;
+                -webkit-transition: all .25s ease-out;
+                transition: all .25s ease-out;
+            }
+            .banner-nav-list > li > a:hover {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+            .banner-nav-list > li > a:before {
+                position: absolute;
+                z-index: 10;
+                content: '';
+                display: block;
+                right: 50%;
+                bottom: 19px;
+                margin-left: -13px;
+                width: 26px;
+                height: 14px;
+                background-image: url("../img/down_arrow.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+                .banner-nav-list > li > a span {
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 12px;
+                    font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: 0;
+                }
+            .banner-nav-list .btn-free-entry,
+            .banner-nav-list a.btn-free-entry {
+                font-size: 40px;
+                padding-bottom: 35px;
+                padding-top: 40px;
+                padding-left: 57px;
+                letter-spacing: -2.2px;
+                max-width: 100%;
+                color: #000;
+                background-color: rgba(255, 255, 255, 0.95);
+            }
+            .banner-nav-list a.btn-free-entry:before,
+            .banner-nav-list .btn-free-entry:before {
+                content: none;
+            }
+            .banner-nav-list a.btn-free-entry:after,
+            .banner-nav-list .btn-free-entry:after {
+                right: 45px;
+                background-image: url("../img/next_arrow_b.png");
+            }
+            .banner-nav-list a.btn-free-entry:hover,
+            .banner-nav-list .btn-free-entry:hover {
+                background-color: rgba(255, 255, 255, 1);
+            }
+                .banner-nav-list .btn-free-entry span,
+                .banner-nav-list a.btn-free-entry span {
+                    margin-top: 10px;
+                    letter-spacing: 1px;
+                }
 .section-awards {
     padding-top: 94px;
     padding-bottom: 40px;
@@ -92,6 +191,7 @@ a.btn-free-entry:hover,
             display: table;
             width: 100%;
             margin-left: 0;
+            margin-right: 0;
         }
             .awards-list > li {
                 display: table-cell;
@@ -120,11 +220,11 @@ a.btn-free-entry:hover,
         }
         .awards-big-text-desc-wap {
             font-size: 18px;
-            font-weight: 600;
+            font-weight: 500;
             color: #000;
         }
             .awards-big-text-desc-wap p {
-                font-weight: 600;
+                font-weight: 500;
                 margin-bottom: 10px;
             }
 .section-how-to-enter {
@@ -173,6 +273,12 @@ a.btn-free-entry:hover,
                 }
                 .how-box a {
                     text-decoration: underline;
+                    -webkit-transition: 0.25s;
+                    -khtml-transition: 0.25s;
+                    -moz-transition: 0.25s;
+                    -ms-transition: 0.25s;
+                    -o-transition: 0.25s;
+                    transition: 0.25s;
                 }
                 .how-box a:hover {
                     text-decoration: none;
@@ -200,37 +306,22 @@ a.btn-free-entry:hover,
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    /*height: 100vh;*/
+    height: 100vh;
     min-height: 400px;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: #272727;
-    /* Center slide text vertically */
-    /*display: -webkit-box;*/
-    /*display: -ms-flexbox;*/
-    /*display: -webkit-flex;*/
-    /*display: flex;*/
-    /*-webkit-box-pack: center;*/
-    /*-ms-flex-pack: center;*/
-    /*-webkit-justify-content: center;*/
-    /*justify-content: center;*/
-    /*-webkit-box-align: center;*/
-    /*-ms-flex-align: center;*/
-    /*-webkit-align-items: center;*/
-    /*align-items: center;*/
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
+    transition-timing-function: ease-in;
+    transition-duration: 0.5s;
 }
-.custom-width .swiper-slide{
-    width: 90%;
+.custom-width .swiper-slide:first-child {
+    width: calc(100% - 200px);
 }
-/*.swiper-slide:nth-child(2n) {*/
-    /*width: 60%;*/
-/*}*/
-/*.swiper-slide:nth-child(3n) {*/
-    /*width: 40%;*/
-/*}*/
+.custom-width .swiper-slide:last-child {
+    width: calc(100% + 200px);
+}
+.swiper-button-next, .swiper-button-prev {
+    z-index: 99999;
+}
