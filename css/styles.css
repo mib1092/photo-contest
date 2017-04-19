@@ -306,8 +306,6 @@ a.btn-free-entry:hover,
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    height: -moz-calc(100vh - 112px);
-    height: -webkit-calc(100vh - 112px);
     height: calc(100vh - 112px);
     min-height: 400px;
     width: 100%;
@@ -319,13 +317,9 @@ a.btn-free-entry:hover,
     transition-duration: 0.5s;
 }
 .custom-width .swiper-slide:first-child {
-    width: -moz-calc(100% - 200px);
-    width: -webkit-calc(100% - 200px);
     width: calc(100% - 200px);
 }
 .custom-width .swiper-slide:last-child {
-    width: -moz-calc(100% + 200px);
-    width: -webkit-calc(100% + 200px);
     width: calc(100% + 200px);
 }
 .swiper-button-next, .swiper-button-prev {
