@@ -11,10 +11,11 @@
     <!--<link href="http://photo-contest.cwponline.imcrs.com/cassette.axd/stylesheet/Q8nZytIyAZBum1UBHsQgecSQuHk=/includes/css/mobile.css" type="text/css" rel="stylesheet">-->
     <!--<link href="css/site.css" rel="stylesheet" type="text/css">-->
 
+<!-- NEW STYLES -->
     <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+<!-- END NEW STYLES -->
+
     <!--[if IE]>
     <link href="http://photo-contest.cwponline.imcrs.com/cassette.axd/stylesheet/QYDdH8uh3SSoulF_KTKCWZ_k1Y4=/includes/css/ie-all.css" type="text/css" rel="stylesheet"/>
     <![endif]-->
@@ -25,6 +26,8 @@
     <div class="footerSlide">
 
     </div>
+
+    <!-- NEW HTML -->
     <div class="fullWrap bodyWrapper ">
         <div class="headerWrap">
             <div class="center">
@@ -89,7 +92,7 @@
         <div class="submit-block">
             <div class="container">
                 <h2 class="section-title">Submit Project</h2>
-                <form  action="/file-upload" class="dropzone">
+                <form action="#" class="dropzone">
                     <div class="row-wrap">
                             <div class="drop-box" id="my-awesome-dropzone">
                                 <p class="drop-desc">Drag and Drop Professional Photos</p>
@@ -98,9 +101,7 @@
                                 <input name="file" type="file" multiple />
                             </div>
                             <div class="drop-warring">
-                                <p>
-                                    Please include several photos. Images must NOT include watermarks, copyright marks, logos, borders or signatures.
-                                </p>
+                                <p>Please include several photos. Images must NOT include watermarks, copyright marks, logos, borders or signatures.</p>
                             </div>
                     </div>
                     <div class="row-wrap">
@@ -133,7 +134,7 @@
                             <label for="Category">Category<span>*</span></label>
                             <div class="select-wrap">
                                 <select id="Category" name="Category">
-                                    <option> </option>
+                                    <option value>&ensp;</option>
                                     <option value="Category 1">Category 1</option>
                                     <option value="Category 2">Category 2</option>
                                     <option value="Category 3">Category 3</option>
@@ -221,7 +222,7 @@
                 </form>
                 <div class="submit-desc-block">
                     <p>Submit as many projects as you wish before July 31, 2017</p>
-                    <span class="warring">By submitting you are agreeing to our <a href="#">terms and condtions</a></span>
+                    <span class="warring">By submitting you are agreeing to our <a href="#termsPopupBackground" class="popup-open">terms and condtions</a></span>
                 </div>
             </div>
         </div>
@@ -276,98 +277,69 @@
         </div>
     </div>
 
-    <div class="backToMobile"><a class="backToMobile" href="http://photo-contest.cwponline.imcrs.com/home/mobilesite">View Mobile Site</a></div>
-    <div id="wishlistPopupBackground" class="wishlistFullWrap" style="display:none;">
-        <div id="myWishlistPopup" class="wishlistPopup">
-            <div class="closePopup">X</div>
-        </div>
-    </div>
+    <!-- NEW POPUP -->
     <div id="termsPopupBackground" class="termsFullWrap" style="display:none;">
         <div id="myTermsPopupBackground" class="termsPopup">
             <div class="closePopup">X</div>
             <div class="popupContent">
-                <h2 class="popup-title">Terms & Conditions </h2>
-                <p>The Custom Wood Photo Contest is open to dealers,
-                    designers and others who collaborate with Custom
-                    Wood Products to create hand crafted cabinetry and
-                    related goods. By entering the 2017 Custom Wood Photo
-                    Contest you accept these terms and conditions.
-                </p>
+                <h2 class="popup-title">2017 Custom Wood Photo Contest Terms & Conditions</h2>
+                <p>The Custom Wood Photo Contest is open to dealers, designers and others who collaborate with
+                    Custom Wood Products to create hand crafted cabinetry and related goods. By entering the 2017
+                    Custom Wood Photo Contest you accept these terms and conditions.</p>
 
                 <h3 class="popup-subtitle">Entry Conditions</h3>
-                <p>
-                    All entries must uploaded entry through this webpage:
-                    cwponline.com/contest and follow the on-screen instructions.
-                    Entrants must create a separate entry for each job submitted
-                    and include the Custom Wood Products job number with the entry.
-                    Entrants must enter one job at a time, and include as many photos
-                    of the job as desired. Entrants may enter multiple jobs, one entry
-                    at a time. There is no time or date restriction on when the image
-                    was taken.
-                </p>
+                <p>All entries must be uploaded through this webpage: cwpawards.com and follow the on-screen instructions.
+                    Entrants must create a separate entry for each job submitted and include the Custom Wood Products
+                    job number with the entry. Entrants must enter one job at a time, and include as many photos of the job as desired.
+                    Entrants may enter multiple jobs, one entry at a time. There is no time or date restriction on when the image was taken.</p>
 
                 <h3 class="popup-subtitle">Files must meet the following specifications:</h3>
                 <ul>
-                    <li>File type: Jpegs and TIFFs (up to 100MB each).</li>
+                    <li>File type: JPEGs and TIFFs (up to 100MB each).</li>
                     <li>Minimum file size requirements: 2,000 pixels on the longest edge.</li>
                     <li>No watermarks, copyright marks, logos, borders or signatures can appear on submitted photographs.</li>
-                    <li>Entrants may enter multiple jobs, one entry at a time. There is no time or date restriction on when the image was taken.</li>
                 </ul>
+
+                <p><strong>Copyrights:</strong> By submitting images to this competition, you certify that you have all
+                    rights to these photographs and that you grant Custom Wood Products permission to use these images
+                    in promotional materials, including but not limited to print, website and social media.</p>
+
+                <p><strong>Categories.</strong> The Custom Wood Photo Contest has three categories:
+                    1) Kitchen, 2) Bathroom and 3) Other (bar, office, library, entertainment, dining room, closet).</p>
+
+                <p><strong>Prizes:</strong> One Gold and multiple Silver awards will be presented in each of the three categories:
+                    1) Kitchen, 2) Bathroom and 3) Other (bar, office, library, entertainment, dining room, closet).
+                    One Best-in-Show award for the single best contest entry will also be presented.
+                    All those who submit work will receive an etched bottle of olive oil.
+                    Winners will receive an award statuette and special placement in select print and online publications, including:</p>
+                <ul>
+                    <li>Custom Wood Products Website</li>
+                    <li>Homepage, Gallery and Be Inspired pages</li>
+                    <li>Award results summary page</li>
+                    <li>Social Media</li>
+                    <li>Special edition coffee table book</li>
+                    <li>Annual brochure, postcards and other materials</li>
+                </ul>
+
+                <p><strong>Judging:</strong> Entries will be judged by a panel of judges including: Kevin Gray, Owner,
+                    Custom Wood Products; Caroline Gray, Owner, Custom Wood Products; Justin Mitchell, Plant Manager,
+                    Custom Wood Products; Tom Price, Thompson Price Kitchen Bath & Home, St Louis, MO; and Dan Holmgren,
+                    President & Creative Director, Imagemakers.</p>
+
+                <p>Images will be judged by category: Kitchen, Bathroom, and Other.</p>
+
+                <p>The decisions of the judges are final. Prizes and rewards are subject to change
+                    without notice and cannot be exchanged, transferred or redeemed for cash.</p>
             </div>
         </div>
     </div>
-    <div id="judgesPopupBackground" class="termsFullWrap" style="display:none;">
-        <div id="myJudgesPopupBackground" class="termsPopup judgesPopup">
+    <!-- END NEW POPUP -->
+
+
+    <div class="backToMobile"><a class="backToMobile" href="http://photo-contest.cwponline.imcrs.com/home/mobilesite">View Mobile Site</a></div>
+    <div id="wishlistPopupBackground" class="wishlistFullWrap" style="display:none;">
+        <div id="myWishlistPopup" class="wishlistPopup">
             <div class="closePopup">X</div>
-            <div class="popupContent">
-                <h2 class="popup-title">The Judges </h2>
-                <p>
-                    We have brought together a panel of judges with deep woodworking,
-                    custom cabinetry and design expertise. Our panel of judges includes.
-                </p>
-            </div>
-            <ul class="judges-list">
-                <li>
-                    <div class="judges-box">
-                        <div class="judges-img-wrap" style="background-image: url();"></div>
-                        <div class="judges-desc">
-                            <span class="judges-name">Kevin Gray</span>
-                            <span>Owner</span>
-                            <span>Custom Wood Products</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="judges-box">
-                        <div class="judges-img-wrap" style="background-image: url();"></div>
-                        <div class="judges-desc">
-                            <span class="judges-name">Caroline Gray</span>
-                            <span>Owner</span>
-                            <span>Custom Wood Products</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="judges-box">
-                        <div class="judges-img-wrap" style="background-image: url();"></div>
-                        <div class="judges-desc">
-                            <span class="judges-name">Kevin Gray</span>
-                            <span>Owner</span>
-                            <span>Custom Wood Products</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="judges-box">
-                        <div class="judges-img-wrap" style="background-image: url();"></div>
-                        <div class="judges-desc">
-                            <span class="judges-name">Caroline Gray</span>
-                            <span>Owner</span>
-                            <span>Custom Wood Products</span>
-                        </div>
-                    </div>
-                </li>
-            </ul>
         </div>
     </div>
     <div id="shareEmailPopupBackground" class="wishlistFullWrap" style="display:none;">
@@ -412,9 +384,7 @@
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/dropzone.js"></script>
-    <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/scripts.js"></script>
+
     <script type="text/javascript">
         if(!window.jQuery){
             document.write('<script src="http://photo-contest.cwponline.imcrs.com/cassette.axd/script/jZHRniBJK2IUL2UZSKJKwicnrmk=/includes/js/jquery.js" type="text/javascript"><\/script>');
@@ -423,18 +393,12 @@
     <script src="js/eui"></script>
     <!--<script src="http://photo-contest.cwponline.imcrs.com/cassette.axd/script/_D72gySdbt_BcQVy1UkofzK1g34=/includes/js/eui" type="text/javascript"></script>-->
 
-    <!-- Initialize Swiper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            //pagination: '.swiper-pagination',
-            //paginationClickable: true,
-            slidesPerView: 'auto',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            spaceBetween: 0,
-            loop: true
-        });
-    </script>
+
+    <!-- NEW SCRIPTS -->
+    <script src="js/dropzone.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- END NEW SCRIPTS -->
+
 </body>
 </html>
