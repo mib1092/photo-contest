@@ -784,7 +784,7 @@ a.btn-free-entry:hover,
         transition: all .25s ease-out;
     }
     .drop-box-hover {
-        display: none;
+        opacity: 0;
         position: absolute;
         z-index: 9999;
         left: -2px;
@@ -792,8 +792,8 @@ a.btn-free-entry:hover,
         width: calc(100% + 4px);
         height: calc(100% + 4px);
         background-color: rgba(0, 0, 0, 0.9);
-        -webkit-transition: all .25s linear;
-        transition: all .25s linear;
+        -webkit-transition: all .25s ease-in;
+        transition: all .25s ease-in;
         pointer-events: none;
     }
         .drop-box-hover span {
@@ -811,15 +811,15 @@ a.btn-free-entry:hover,
             -o-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
         }
-    /*.drop-box:hover {*/
-        /*border-color: #000;*/
-    /*}*/
-    .drop-box:hover .drop-box-hover {
-        display: block;
+    .dz-started.drop-box:hover {
+        border-color: #000;
     }
-    /*.drop-box:hover .defaultSubmit {*/
-        /*background-color: #000;*/
-    /*}*/
+    div:not(.dz-started).drop-box:hover .drop-box-hover {
+        opacity: 1;
+    }
+    .dz-started.drop-box:hover .defaultSubmit {
+        background-color: #000;
+    }
 .drop-warring {
     margin-top: 8px;
     margin-bottom: 36px;
@@ -836,6 +836,12 @@ a.btn-free-entry:hover,
     .dropzone .dz-preview .dz-image {
         border-radius: 0;
     }
+.dropzone .dz-preview .dz-remove {
+    text-decoration: underline;
+}
+.dropzone .dz-preview .dz-remove:hover {
+    text-decoration: none;
+}
 /*-------------------------------------RESPONSIVE---------------------------------------*/
 @media all and (max-width: 1400px) {
     .banner-title {
@@ -991,13 +997,17 @@ a.btn-free-entry:hover,
     .mobileBodyWrapper .row-list > li:last-child {
         margin-bottom: 0;
     }
-        .mobileBodyWrapper .drop-box:hover {
+        .mobileBodyWrapper .drop-box:hover,
+        .mobileBodyWrapper .dz-started.drop-box:hover {
             border-color: #000;
         }
-        .mobileBodyWrapper .drop-box:hover .drop-box-hover {
+        .mobileBodyWrapper .drop-box:hover .drop-box-hover,
+        .mobileBodyWrapper div:not(.dz-started).drop-box:hover .drop-box-hover{
             display: none;
+            opacity: 0;
         }
-        .mobileBodyWrapper .drop-box:hover .defaultSubmit {
+        .mobileBodyWrapper .drop-box:hover .defaultSubmit,
+        .mobileBodyWrapper .dz-started.drop-box:hover .defaultSubmit{
             background-color: #000;
         }
         .mobileBodyWrapper .submit-block .section-title {

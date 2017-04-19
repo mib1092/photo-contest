@@ -41,7 +41,8 @@ jQuery(document).ready(function($) {
 
     // for dropzone
     $("#my-awesome-dropzone").dropzone({
-        url: "/file-upload"
+        url: "/file-upload",
+        addRemoveLinks: true
     });
 
 });
