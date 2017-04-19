@@ -752,9 +752,12 @@ a.btn-free-entry:hover,
     }
 
 .drop-box {
-    padding: 55px 20px 53px;
+    padding: 55px 20px 33px;
     border: 2px dashed #c1c1c1;
     text-align: center;
+    cursor: pointer;
+    -webkit-transition: all .25s ease-out;
+    transition: all .25s ease-out;
 }
     .drop-desc {
         margin-bottom: 3px;
@@ -773,9 +776,20 @@ a.btn-free-entry:hover,
         display: none;
     }
     .drop-box .defaultSubmit {
+        display: block;
         width: 161px;
-        margin: 0 0 0 10px;
+        margin: 0 auto 20px;
         letter-spacing: 0.3px;
+        cursor: pointer;
+        pointer-events: none;
+        -webkit-transition: all .25s ease-out;
+        transition: all .25s ease-out;
+    }
+    .drop-box:hover {
+        border-color: #000;
+    }
+    .drop-box:hover .defaultSubmit {
+        background-color: #000;
     }
 .drop-warring {
     margin-top: 8px;
@@ -785,6 +799,13 @@ a.btn-free-entry:hover,
 }
     .drop-warring p {
         font-size: 12px;
+    }
+    .dropzone {
+        padding: 0;
+        border: none;
+    }
+    .dropzone .dz-preview .dz-image {
+        border-radius: 0;
     }
 /*-------------------------------------RESPONSIVE---------------------------------------*/
 @media all and (max-width: 1400px) {

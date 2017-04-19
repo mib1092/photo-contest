@@ -1,3 +1,4 @@
+Dropzone.autoDiscover = false;
 jQuery(document).ready(function($) {
 
 	// for smooth scroll
@@ -39,5 +40,8 @@ jQuery(document).ready(function($) {
     });
 
     //for dropzone
+    $("#my-awesome-dropzone").dropzone({
+        url: "/file-upload"
+    });
 
 });
