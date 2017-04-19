@@ -566,6 +566,14 @@ mobileBodyWrapper .custom-width .swiper-button-next span {
             margin-top: -4px;
             letter-spacing: 0.3px;
         }
+.mobileBodyWrapper .section-awards {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.mobileBodyWrapper .section-how-to-enter {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 .mobileBodyWrapper .awards-list > li {
     display: block;
     padding: 0;
@@ -577,7 +585,9 @@ mobileBodyWrapper .custom-width .swiper-button-next span {
         width: 100%;
     }
         .mobileBodyWrapper .awards-img-wrap {
-            padding-left: 57px;
+            padding-left: 0;
+            margin-left: -15px;
+            margin-right: -15px;
         }
             .mobileBodyWrapper .awards-img-wrap img {
                 max-width: 100%;
