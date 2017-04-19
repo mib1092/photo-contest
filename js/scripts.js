@@ -15,11 +15,27 @@ jQuery(document).ready(function($) {
             winHeight       = $(window).height(),
             sliderHeight    = winHeight - headerHeight;
 
-        slider.height(sliderHeight);
+        slider.height(sliderHeight).removeClass('custom-width');
 
         setTimeout(function () {
             slider.addClass('custom-width');
         }, 2000);
+    });
+
+    // for popups
+    $('.popup-open').on('click', function(){
+        var url  = $(this).attr('href'),
+            hash = url.substring(url.indexOf('#')+1);
+
+        $('#'+hash).fadeIn(500);
+    });
+    $('.termsFullWrap .closePopup').on('click', function(){
+        $(this).parents('.termsFullWrap').fadeOut(500);
+    });
+    $('.termsFullWrap').on('click', function(e){
+        if (e.target !== this)
+            return;
+        $(this).fadeOut(500);
     });
 
     //for dropzone

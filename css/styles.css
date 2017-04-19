@@ -125,10 +125,10 @@ a.btn-free-entry:hover,
             .banner-nav-list > li > a {
                 position: relative;
                 display: block;
-                padding: 32px 20px 43px;
+                padding: 32px 20px 45px;
                 font-family: 'BodoniBT-Book','Bodoni Bk BT','Bodoni MT',Didot,'Didot LT STD','Hoefler Text',Garamond,'Times New Roman',serif;
                 font-size: 35px;
-                letter-spacing: -2px;
+                letter-spacing: -0.5px;
                 color: #fff;
                 background-color: rgba(0, 0, 0, 0.62);
                 text-decoration: none;
@@ -166,10 +166,10 @@ a.btn-free-entry:hover,
             .banner-nav-list .btn-free-entry,
             .banner-nav-list a.btn-free-entry {
                 font-size: 40px;
-                padding-bottom: 35px;
+                padding-bottom: 37px;
                 padding-top: 40px;
                 padding-left: 57px;
-                letter-spacing: -2.2px;
+                letter-spacing: -1px;
                 max-width: 100%;
                 color: #000;
                 background-color: rgba(255, 255, 255, 0.95);
@@ -335,8 +335,7 @@ a.btn-free-entry:hover,
     background-position: center;
     background-size: cover;
     background-color: #272727;
-    transition-timing-function: ease-in;
-    transition-duration: 0.5s;
+    transition: width 0.5s ease-in 0s;
 }
 .custom-width .swiper-slide:first-child {
     width: calc(100% - 200px);
@@ -344,42 +343,59 @@ a.btn-free-entry:hover,
 .custom-width .swiper-slide:last-child {
     width: calc(100% + 200px);
 }
-.swiper-button-next, .swiper-button-prev {
+
+.swiper-button-next,
+.swiper-button-prev {
     z-index: 99999;
+    width: 200px;
+    top: 0;
+    height: 100%;
+    margin-top: 0;
+    background-size: auto;
+    background-position: 155px center;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.swiper-button-prev.swiper-button-white,
+.swiper-container-rtl .swiper-button-next.swiper-button-white {
+    left: 0;
+    background-image: url(../img/control_arrow.png);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.swiper-button-next.swiper-button-white,
+.swiper-container-rtl .swiper-button-prev.swiper-button-white {
+    right: 0;
+    background-image: url(../img/control_arrow.png);
 }
 .swiper-button-next span {
     position: absolute;
-    display: none;
+    display: block;
     max-width: 100px;
     padding-top: 2px;
     top: 50%;
-    left: -25px;
+    right: 70px;
     text-transform: uppercase;
     font-weight: 700;
     color: #aaaaaa;
     text-align: right;
     line-height: 1.5;
-    -moz-transform: translate(-100%, -50%);
-    -ms-transform: translate(-100%, -50%);
-    -webkit-transform: translate(-100%, -50%);
-    -o-transform: translate(-100%, -50%);
-    transform: translate(-100%, -50%);
+    opacity: 0;
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
     -webkit-transition: all .25s ease-out;
     transition: all .25s ease-out;
 }
 .custom-width .swiper-button-next span {
-    display: block;
+    opacity: 1;
 }
 .swiper-button-next:hover span,
 .swiper-button-next span:hover {
     color: #fff;
-}
-
-.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-    left: 1px;
-}
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-    right: 1px;
 }
 
 /*popup*/
@@ -404,13 +420,13 @@ a.btn-free-entry:hover,
 .termsPopup {
     position: absolute;
     display: block;
-    width: auto;
-    max-width: 727px;
-    max-height: 90%;
-    top: 0;
+    width: 727px;
+    max-width: 90%;
+    height: auto;
+    max-height: 670px;
+    top: 50%;
     left: 0;
     right: 0;
-    bottom: 0;
     margin: auto;
     padding: 92px 100px 90px 70px;
     background: #fff;
@@ -418,6 +434,11 @@ a.btn-free-entry:hover,
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     overflow: auto;
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
 }
     .popupContent * {
         font-size: 13px;
@@ -775,9 +796,21 @@ a.btn-free-entry:hover,
             font-size: 60px;
         }
 }
+@media all and (max-height: 700px){
+    .termsPopup {
+        max-height: 90%;
+    }
+}
+@media all and (max-width: 480px){
+    .termsPopup {
+        padding: 50px 40px;
+    }
+}
 
 
+/*------------------------------------------------------------------------------------*/
 /*-------------------------------------ADAPTIVE---------------------------------------*/
+/*------------------------------------------------------------------------------------*/
 .mobileBodyWrapper .custom-width .swiper-button-next span {
     display: none;
 }
