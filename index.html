@@ -95,14 +95,20 @@
 
                 <!-- Add navigation buttons -->
                 <div class="swiper-button-prev swiper-button-white"></div>
-                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"><span>inspiration photos</span></div>
                 <div class="sw-content">
                     <div class="container">
-                        <h2 class="banner-title"><span>2017</span>
-                            Design
-                            Inspiration
-                            Awards
-                        </h2>
+                        <div class="container-box">
+                            <h2 class="banner-title"><span>2017</span>
+                                Design<br>
+                                Inspiration<br>
+                                Awards
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="sw-banner-nav">
+                    <div class="container">
                         <ul class="banner-nav-list">
                             <li>
                                 <a href="#" class="btn-free-entry">
@@ -315,7 +321,6 @@
         var swiper = new Swiper('.swiper-container', {
             //pagination: '.swiper-pagination',
             //paginationClickable: true,
-            loop: true,
             slidesPerView: 'auto',
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',

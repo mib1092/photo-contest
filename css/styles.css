@@ -55,21 +55,40 @@ a.btn-free-entry:hover,
 .sw-content {
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
     z-index: 999;
     color: #fff;
 }
-    .sw-content * {
+.sw-banner-nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}
+    .sw-content *,
+    .sw-banner-nav * {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
     .sw-content .container {
         position: relative;
+        height: 100%;
+        display: table;
+        padding-bottom: 130px;
+        padding-top: 30px;
     }
+        .sw-content .container .container-box {
+            display: table-cell;
+            width: 100%;
+            min-height: 50px;
+            vertical-align: middle;
+        }
     .banner-title {
-        max-width: 590px;
+        max-width: 1120px;
         font-family: 'BodoniBT-Book','Bodoni Bk BT','Bodoni MT',Didot,'Didot LT STD','Hoefler Text',Garamond,'Times New Roman',serif;
         font-size: 140px;
         line-height: 0.93;
@@ -82,6 +101,8 @@ a.btn-free-entry:hover,
             margin-bottom: 10px;
         }
     .banner-nav-list {
+        position: absolute;
+        bottom: 0;
         max-width: 1120px;
         width: 100%;
         outline:none;
@@ -114,6 +135,7 @@ a.btn-free-entry:hover,
                 -webkit-transition: all .25s ease-out;
                 transition: all .25s ease-out;
             }
+
             .banner-nav-list > li > a:hover {
                 background-color: rgba(0, 0, 0, 0.8);
             }
@@ -124,7 +146,7 @@ a.btn-free-entry:hover,
                 display: block;
                 right: 50%;
                 bottom: 19px;
-                margin-left: -13px;
+                margin-right: -13px;
                 width: 26px;
                 height: 14px;
                 background-image: url("../img/down_arrow.png");
@@ -324,4 +346,49 @@ a.btn-free-entry:hover,
 }
 .swiper-button-next, .swiper-button-prev {
     z-index: 99999;
+}
+.swiper-button-next span {
+    position: absolute;
+    display: none;
+    max-width: 100px;
+    padding-top: 2px;
+    top: 50%;
+    left: -25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #aaaaaa;
+    text-align: right;
+    line-height: 1.5;
+    -moz-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    -webkit-transform: translate(-100%, -50%);
+    -o-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+    -webkit-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+.custom-width .swiper-button-next span {
+    display: block;
+}
+.swiper-button-next:hover span,
+.swiper-button-next span:hover {
+    color: #fff;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 1px;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 1px;
+}
+
+/*-------------------------------------RESPONSIVE---------------------------------------*/
+@media all and (max-width: 1400px) {
+    .banner-title {
+        margin-left: 20px;
+        font-size: 95px;
+    }
+        .banner-title span {
+            font-size: 60px;
+        }
 }
