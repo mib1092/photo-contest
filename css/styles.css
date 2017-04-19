@@ -320,7 +320,7 @@ a.btn-free-entry:hover,
     width: calc(100% - 200px);
 }
 .custom-width .swiper-slide:last-child {
-    width: calc(100% + 200px);
+    /*width: calc(100% + 200px);*/
 }
 .swiper-button-next, .swiper-button-prev {
     z-index: 99999;
