@@ -66,7 +66,7 @@ a.btn-free-entry:hover,
     left: 0;
     bottom: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 99999;
 }
     .sw-content *,
     .sw-banner-nav * {
@@ -149,7 +149,7 @@ a.btn-free-entry:hover,
                 margin-right: -13px;
                 width: 26px;
                 height: 14px;
-                background-image: url("../img/down_arrow.png");
+                background-image: url(../img/down_arrow.png);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -181,7 +181,7 @@ a.btn-free-entry:hover,
             .banner-nav-list a.btn-free-entry:after,
             .banner-nav-list .btn-free-entry:after {
                 right: 45px;
-                background-image: url("../img/next_arrow_b.png");
+                background-image: url(../img/next_arrow_b.png);
             }
             .banner-nav-list a.btn-free-entry:hover,
             .banner-nav-list .btn-free-entry:hover {
@@ -246,7 +246,7 @@ a.btn-free-entry:hover,
             color: #000;
         }
             .awards-big-text-desc-wap p {
-                font-weight: 500;
+                font-weight: 600;
                 margin-bottom: 10px;
             }
 .section-how-to-enter {
@@ -337,10 +337,10 @@ a.btn-free-entry:hover,
     background-color: #272727;
     transition: width 0.5s ease-in 0s;
 }
-.custom-width .swiper-slide:first-child {
+.bodyWrapper:not(.mobileBodyWrapper) .custom-width .swiper-slide:first-child {
     width: calc(100% - 200px);
 }
-.custom-width .swiper-slide:last-child {
+.bodyWrapper:not(.mobileBodyWrapper) .custom-width .swiper-slide:last-child {
     width: calc(100% + 200px);
 }
 
@@ -784,9 +784,9 @@ a.btn-free-entry:hover,
         transition: all .25s ease-out;
     }
     .drop-box-hover {
-        opacity: 0;
+        display: block;
         position: absolute;
-        z-index: 9999;
+        z-index: 2000;
         left: -2px;
         top: -2px;
         width: calc(100% + 4px);
@@ -795,6 +795,7 @@ a.btn-free-entry:hover,
         -webkit-transition: all .25s ease-in;
         transition: all .25s ease-in;
         pointer-events: none;
+        opacity: 0;
     }
         .drop-box-hover span {
             position: absolute;
@@ -880,12 +881,14 @@ a.btn-free-entry:hover,
         margin-bottom: 5px;
     }
 
+    .mobileBodyWrapper .mobile-hide {
+        display: none;
+    }
+
     .mobileBodyWrapper .banner-nav-list .btn-free-entry,
     .mobileBodyWrapper .banner-nav-list a.btn-free-entry {
         font-size: 22.5px;
-        padding-bottom: 35px;
-        padding-top: 40px;
-        padding-left: 57px;
+        padding: 14px 40px 8px 24px;
         letter-spacing: -1.2px;
         max-width: 100%;
         color: #000;
@@ -910,8 +913,13 @@ a.btn-free-entry:hover,
             margin-top: -4px;
             letter-spacing: 0.3px;
         }
+    .mobileBodyWrapper .swiper-button-prev,
+    .mobileBodyWrapper .swiper-container-rtl .swiper-button-next {
+        display: none;
+    }
+
 .mobileBodyWrapper .section-awards {
-    padding-top: 40px;
+    padding-top: 60px;
     padding-bottom: 20px;
 }
 .mobileBodyWrapper .section-how-to-enter {
@@ -946,38 +954,47 @@ a.btn-free-entry:hover,
                 font-size: 14px;
             }
                 .mobileBodyWrapper .awards-big-text-desc-wap p {
-                    font-weight: 500;
-                    margin-bottom: 10px;
+                    font-weight: 600;
+                    margin-bottom: 0;
                 }
-    .mobileBodyWrapper  .section-title {
-        margin-bottom: 3px;
+    .mobileBodyWrapper .section-title {
+        margin-bottom: 18px;
         font-size: 38px;
+        text-align: left;
     }
         .mobileBodyWrapper .how-title {
             font-size: 14px;
+            margin-bottom: 2px;
         }
-        .mobileBodyWrapper  .how-to-list {
-            margin: 0 auto;
-            max-width: 1220px;
-            text-align: center;
+        .mobileBodyWrapper .how-to-list {
+            text-align: left;
         }
-            .mobileBodyWrapper  .how-to-list > li {
+            .mobileBodyWrapper .how-to-list > li {
                 display: block;
                 width: 100%;
                 padding: 0;
                 margin-bottom: 25px;
-                text-align: center;
+                text-align: left;
             }
-            .mobileBodyWrapper  .how-to-list > li:nth-child(3n+1) {
+            .mobileBodyWrapper .how-to-list > li:nth-child(3n+1) {
                 clear: none;
             }
-                .mobileBodyWrapper  .how-box {
-                    max-width: 320px;
-                    margin: 0 auto;
-                    text-align: center;
+                .mobileBodyWrapper .how-box {
+                    max-width: 100%;
+                    text-align: left;
+                }
+                .mobileBodyWrapper .how-to-list > li .btn-free-entry {
+                    margin-left: 0;
+                    font-size: 22.5px;
+                    padding: 14px 40px 8px 24px;
+                }
+                .mobileBodyWrapper .how-to-list > li .btn-free-entry span {
+                    font-size: 9px;
+                    margin-top: -4px;
+                    letter-spacing: 0.3px;
                 }
 .mobileBodyWrapper .submit-block {
-    padding-top: 24px;
+    padding-top: 44px;
     padding-bottom: 30px;
 }
     .mobileBodyWrapper .row-list {
@@ -997,6 +1014,11 @@ a.btn-free-entry:hover,
     .mobileBodyWrapper .row-list > li:last-child {
         margin-bottom: 0;
     }
+        .mobileBodyWrapper .row-wrap,
+        .mobileBodyWrapper .row-wrap.textarea,
+        .mobileBodyWrapper .row-wrap.address {
+            margin-bottom: 8px;
+        }
         .mobileBodyWrapper .drop-box:hover,
         .mobileBodyWrapper .dz-started.drop-box:hover {
             border-color: #000;
