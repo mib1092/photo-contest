@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Photo Contest</title>
+    <title>Submit</title>
 
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
     <link href="http://photo-contest.cwponline.imcrs.com/cassette.axd/stylesheet/ClQey9TwTGbmdySHtKbOR58g00g=/includes/css/site.css" rel="stylesheet">
@@ -12,6 +12,9 @@
     <!--<link href="css/site.css" rel="stylesheet" type="text/css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+
     <!--[if IE]>
     <link href="http://photo-contest.cwponline.imcrs.com/cassette.axd/stylesheet/QYDdH8uh3SSoulF_KTKCWZ_k1Y4=/includes/css/ie-all.css" type="text/css" rel="stylesheet"/>
     <![endif]-->
@@ -83,128 +86,179 @@
             </div>
         </div>
 
-        <div class="main-slider">
-            <!-- Swiper -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image: url(img/blackKitchen.jpg);"></div>
-                    <div class="swiper-slide" style="background-image: url(img/woodSanding.jpg);"></div>
-                    <div class="swiper-slide" style="background-image: url(img/gangConstruction.jpg);"></div>
-                </div>
-                <!-- Add Pagination -->
-                <!--<div class="swiper-pagination"></div>-->
+        <div class="submit-block">
+            <!--<div class="container">-->
+                <!---->
+            <!--<form>-->
+                <!--<div class="row-wrap">-->
+                    <!--<div class="drop-box">-->
+                        <!--<p class="drop-desc">Drag and Drop Professional Photos</p>-->
+                        <!--<span class="or">or</span>-->
+                        <!--<span class="defaultSubmit">Upload Photos</span>-->
+                        <!--<input name="file" type="file" multiple />-->
+                    <!--</div>-->
+                    <!--<div class="drop-warring">-->
+                        <!--<p>-->
+                            <!--Please include several photos. Images must NOT include watermarks, copyright marks, logos, borders or signatures.-->
+                        <!--</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                    <!--<div class="row-wrap">-->
+                        <!--<ul class="row-list">-->
+                            <!--<li>-->
+                                <!--<label for="FirstName">First Name<span>*</span></label>-->
+                                <!--<input id="FirstName" name="FirstName" class="defaultInput" maxlength="100" type="text" value="" required="">-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<label for="LastName">Last Name<span>*</span></label>-->
+                                <!--<input id="LastName" name="LastName" class="defaultInput" maxlength="100" type="text" value="" required="">-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<label for="Phone">Phone<span>*</span></label>-->
+                                <!--<input id="Phone" name="Phone" class="defaultInput" type="text" maxlength="50" value="">-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</form>-->
+            <!--</div>-->
 
-                <!-- Add navigation buttons -->
-                <div class="swiper-button-prev swiper-button-white"></div>
-                <div class="swiper-button-next swiper-button-white"><span>inspiration photos</span></div>
-                <div class="sw-content">
-                    <div class="container">
-                        <div class="container-box">
-                            <h2 class="banner-title"><span>2017</span>
-                                Design<br>
-                                Inspiration<br>
-                                Awards
-                            </h2>
+            <div class="container">
+                <h2 class="section-title">Submit Project</h2>
+                <form>
+                    <div class="row-wrap">
+                        <div class="drop-box">
+                            <p class="drop-desc">Drag and Drop Professional Photos</p>
+                            <span class="or">or</span>
+                            <span class="defaultSubmit">Upload Photos</span>
+                            <input name="file" type="file" multiple />
+                        </div>
+                        <div class="drop-warring">
+                            <p>
+                                Please include several photos. Images must NOT include watermarks, copyright marks, logos, borders or signatures.
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="sw-banner-nav">
-                    <div class="container">
-                        <ul class="banner-nav-list">
+                    <div class="row-wrap">
+                        <ul class="row-list">
+                        <li>
+                            <label for="FirstName">First Name<span>*</span></label>
+                            <input id="FirstName" name="FirstName" class="defaultInput" maxlength="100" type="text" value="" required="">
+                        </li>
+                        <li>
+                            <label for="LastName">Last Name<span>*</span></label>
+                            <input id="LastName" name="LastName" class="defaultInput" maxlength="100" type="text" value="" required="">
+                        </li>
+                        <li>
+                            <label for="Phone">Phone<span>*</span></label>
+                            <input id="Phone" name="Phone" class="defaultInput" type="text" maxlength="50" value="">
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="row-wrap">
+                        <ul class="row-list">
+                        <li>
+                            <label for="Email">Email<span>*</span></label>
+                            <input id="Email" name="Email" class="defaultInput" type="email" maxlength="100" value="" required="">
+                        </li>
+                        <li>
+                            <label for="C_Email">Confirm Email<span>*</span></label>
+                            <input id="C_Email" name="Email" class="defaultInput" type="email" maxlength="100" value="" required="">
+                        </li>
+                        <li>
+                            <label for="Category">Category<span>*</span></label>
+                            <div class="select-wrap">
+                                <select id="Category" name="Category">
+                                    <option> </option>
+                                    <option value="Category 1">Category 1</option>
+                                    <option value="Category 2">Category 2</option>
+                                    <option value="Category 3">Category 3</option>
+                                    <option value="Category 4">Category 4</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="row-wrap address">
+                        <ul class="row-list">
                             <li>
-                                <a href="#" class="btn-free-entry">
-                                    Free Entry
-                                    <span>Deadline: July 31, 2017</span>
-                                </a>
+                                <label for="City">City<span>*</span></label>
+                                <input id="City" name="City" class="defaultInput" maxlength="50" type="text" value="" required="">
                             </li>
                             <li>
-                                <a data-scroll href="#prizes-awards">
-                                    Prizes & Awards
-                                    <span>web placement, publications & trophies</span>
-                                </a>
+                                <label for="State">State<span>*</span></label>
+                                <input id="State" name="State" class="defaultInput" maxlength="2" type="text" value="" required="">
                             </li>
                             <li>
-                                <a data-scroll href="#how-to-enter">
-                                    How to Enter
-                                    <span>Entry instructions, Judges & MORE</span>
-                                </a>
+                                <label for="Job">Job#<span>*</span></label>
+                                <input id="Job" name="Job" class="defaultInput" maxlength="50" type="text" value="" required="" placeholder="ex: CWP 2934">
                             </li>
                         </ul>
                     </div>
+
+                    <div class="row-wrap textarea">
+                        <label for="text">Tell us about this project<span>*</span></label>
+                        <textarea id="text" name="text" placeholder="Brag a little! Describe the background of the project. including any challenges the team faced and how they were overcome."></textarea>
+                    </div>
+
+                    <div class="row-wrap two-row">
+                        <ul class="row-list">
+                            <li>
+                                <label for="DealerDesignFirm">Dealer / Design Firm<span>*</span></label>
+                                <input id="DealerDesignFirm" name="DealerDesignFirm" class="defaultInput" maxlength="100" type="text" value="" required="">
+                            </li>
+                            <li>
+                                <label for="DealerDesignWebsite">Dealer / Design Website</label>
+                                <input id="DealerDesignWebsite" name="DealerDesignWebsite" class="defaultInput" maxlength="100" type="text" value="" placeholder="Not required  -  ex: www.cwponline.com">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row-wrap two-row">
+                        <ul class="row-list">
+                            <li>
+                                <label for="Designer">Designer<span>*</span></label>
+                                <input id="Designer" name="Designer" class="defaultInput" maxlength="100" type="text" value="" required="">
+                            </li>
+                            <li>
+                                <label for="DesignerWebsite">Designer Website</label>
+                                <input id="DesignerWebsite" name="DesignerWebsite" class="defaultInput" maxlength="100" type="text" value="" placeholder="Not required  -  ex: www.cwponline.com">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row-wrap two-row">
+                        <ul class="row-list">
+                            <li>
+                                <label for="Contractor">Contractor<span>*</span></label>
+                                <input id="Contractor" name="Contractor" class="defaultInput" maxlength="100" type="text" value="" required="">
+                            </li>
+                            <li>
+                                <label for="ContractorWebsite">Contractor Website</label>
+                                <input id="ContractorWebsite" name="ContractorWebsite" class="defaultInput" maxlength="100" type="text" value="" placeholder="Not required  -  ex: www.cwponline.com">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row-wrap two-row">
+                        <ul class="row-list">
+                            <li>
+                                <label for="Photographer">Photographer</label>
+                                <input id="Photographer" name="Photographer" class="defaultInput" maxlength="100" type="text" value="" placeholder="Not required">
+                            </li>
+                            <li>
+                                <label for="PhotographerWebsite">Photographer Website</label>
+                                <input id="PhotographerWebsite" name="PhotographerWebsite" class="defaultInput" maxlength="100" type="text" value="" placeholder="Not required  -  ex: www.cwponline.com">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <input id="submitRequest" class="defaultSubmit" type="submit" value="Submit Job">
+                </form>
+                <div class="submit-desc-block">
+                    <p>Submit as many projects as you wish before July 31, 2017</p>
+                    <span class="warring">By submitting you are agreeing to our <a href="#">terms and condtions</a></span>
                 </div>
             </div>
-        </div>
-
-        <div class="section-awards" id="prizes-awards">
-            <div class="container">
-                <ul class="awards-list">
-                    <li class="awards-desc-box">
-                        <h2 class="section-title">Prizes & Awards</h2>
-                        <div class="awards-desc-wap">
-                            <p>Winners across three categories will receive award statuettes as well as prime placement in a special
-                                edition coffee table book and on the Custom Wood Products website, social media and materials.</p>
-                        </div>
-                        <div class="awards-big-text-desc-wap">
-                            <p>Gold and silver awards in 3 categories</p>
-                            <p>Inclusion in a special coffee table book</p>
-                            <p>Placement on our website, and materials</p>
-                        </div>
-                    </li>
-                    <li class="awards-img-box">
-                        <div class="awards-img-wrap">
-                            <img src="img/award.png" alt="Prizes & Awards">
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section-how-to-enter" id="how-to-enter">
-         <div class="container">
-             <h2 class="section-title">How To Enter</h2>
-             <ul class="how-to-list">
-                 <li>
-                     <div class="how-box">
-                        <h3 class="how-title">Is entering easy?</h3>
-                        <p>Yes! Entering takes just a few minutes.
-                            Just go to our <a href="submit.html">submission page</a> to start your first entry today.</p>
-                     </div>
-                 </li>
-                 <li>
-                     <div class="how-box">
-                        <h3 class="how-title">How does it work?</h3>
-                        <p>Dealers and designers who work with Custom Wood Products are invited to enter their work.
-                            Winners across 3 categories will receive an award plus prime placement on our website and in a special coffee table book, and more.</p>
-                     </div>
-                 </li>
-                 <li>
-                     <div class="how-box">
-                        <h3 class="how-title">How many projects can I enter?</h3>
-                        <p>As many as you’d like! Create a separate entry for each project you’d like to submit, and include
-                            as many photos as you’d wish. You may enter multiple jobs, just enter them one at a time.</p>
-                     </div>
-                 </li>
-                 <li>
-                     <div class="how-box">
-                        <h3 class="how-title">Who’s judging?</h3>
-                         <p>We have brought together a <a href="#">panel of judges</a> with a deep woodworking, custom cabinetry and design expertise.</p>
-                     </div>
-                 </li>
-                 <li>
-                     <div class="how-box">
-                        <h3 class="how-title">How do I enter?</h3>
-                         <p>Simply drag-and-drop photos of the job you’d like to enter into the field on our
-                             <a href="submit.html">submission page</a>, fill in the required information, and submit your entry.</p>
-                     </div>
-                 </li>
-                 <li>
-                     <a href="#" class="btn-free-entry">
-                         Free Entry
-                         <span>Deadline: July 31, 2017</span>
-                     </a>
-                 </li>
-             </ul>
-         </div>
         </div>
 
         <div class="footerWrap">
@@ -393,7 +447,7 @@
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
+    <script src="js/dropzone.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/scripts.js"></script>
     <script type="text/javascript">
@@ -417,6 +471,69 @@
             loop: true
         });
     </script>
+    <!--<script type="text/javascript">-->
+        <!--(function(window) {-->
+            <!--function triggerCallback(e, callback) {-->
+                <!--if(!callback || typeof callback !== 'function') {-->
+                    <!--return;-->
+                <!--}-->
+                <!--var files;-->
+                <!--if(e.dataTransfer) {-->
+                    <!--files = e.dataTransfer.files;-->
+                <!--} else if(e.target) {-->
+                    <!--files = e.target.files;-->
+                <!--}-->
+                <!--callback.call(null, files);-->
+            <!--}-->
+            <!--function makeDroppable(ele, callback) {-->
+                <!--var input = document.createElement('input');-->
+                <!--input.setAttribute('type', 'file');-->
+                <!--input.setAttribute('multiple', true);-->
+                <!--input.style.display = 'none';-->
+                <!--input.addEventListener('change', function(e) {-->
+                    <!--triggerCallback(e, callback);-->
+                <!--});-->
+                <!--ele.appendChild(input);-->
 
+                <!--ele.addEventListener('dragover', function(e) {-->
+                    <!--e.preventDefault();-->
+                    <!--e.stopPropagation();-->
+                    <!--ele.classList.add('dragover');-->
+                <!--});-->
+
+                <!--ele.addEventListener('dragleave', function(e) {-->
+                    <!--e.preventDefault();-->
+                    <!--e.stopPropagation();-->
+                    <!--ele.classList.remove('dragover');-->
+                <!--});-->
+
+                <!--ele.addEventListener('drop', function(e) {-->
+                    <!--e.preventDefault();-->
+                    <!--e.stopPropagation();-->
+                    <!--ele.classList.remove('dragover');-->
+                    <!--triggerCallback(e, callback);-->
+                <!--});-->
+
+                <!--ele.addEventListener('click', function() {-->
+                    <!--input.value = null;-->
+                    <!--input.click();-->
+                <!--});-->
+            <!--}-->
+            <!--window.makeDroppable = makeDroppable;-->
+        <!--})(this);-->
+        <!--(function(window) {-->
+            <!--makeDroppable(window.document.querySelector('.demo-droppable'), function(files) {-->
+                <!--console.log(files);-->
+                <!--var output = document.querySelector('.output');-->
+                <!--output.innerHTML = '';-->
+                <!--for(var i=0; i<files.length; i++) {-->
+                    <!--if(files[i].type.indexOf('image/') === 0) {-->
+                        <!--output.innerHTML += '<img width="200" src="' + URL.createObjectURL(files[i]) + '" />';-->
+                    <!--}-->
+                    <!--output.innerHTML += '<p>'+files[i].name+'</p>';-->
+                <!--}-->
+            <!--});-->
+        <!--})(this);-->
+    <!--</script>-->
 </body>
 </html>
