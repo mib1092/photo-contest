@@ -858,6 +858,11 @@ a.btn-free-entry:hover,
         max-height: 90%;
     }
 }
+@media all and (orientation: landscape), all and (max-height: 480px) {
+    .banner-title br {
+        display: none;
+    }
+}
 @media all and (max-width: 480px){
     .termsPopup {
         padding: 50px 40px;
