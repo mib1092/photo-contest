@@ -639,7 +639,10 @@ a.btn-free-entry:hover,
     background: #ffffff;
     border: 1px solid #c3c3c3;
 }
-
+input {
+    -webkit-border-radius:0;
+    border-radius: 0;
+}
 .select-wrap { position:relative; }
 .select-wrap:after {
     content: '';
