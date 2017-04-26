@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
             winHeight       = $(window).height(),
             sliderHeight    = winHeight - headerHeight;
 
-        slider.height(sliderHeight).removeClass('custom-width');
+        slider.height(sliderHeight);
 
         setTimeout(function () {
             slider.addClass('custom-width');

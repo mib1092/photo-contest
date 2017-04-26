@@ -360,9 +360,9 @@ a.btn-free-entry:hover,
 .bodyWrapper:not(.mobileBodyWrapper) .custom-width .swiper-slide:first-child {
     width: calc(100% - 200px);
 }
-.bodyWrapper:not(.mobileBodyWrapper) .custom-width .swiper-slide:last-child {
-    width: calc(100% + 200px);
-}
+/*.bodyWrapper:not(.mobileBodyWrapper) .custom-width .swiper-slide:last-child {*/
+    /*width: calc(100% + 200px);*/
+/*}*/
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -632,9 +632,11 @@ a.btn-free-entry:hover,
     margin: 0 10px 0 0;
     padding: 9px 12px;
     width: 100%;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius:0;
+    border-radius: 0;
     cursor:pointer;
     color: #a7a7a7;
     background: #ffffff;
@@ -676,6 +678,8 @@ a.btn-free-entry:hover,
     min-height: 150px;
     resize: none;
     border: 1px solid #c3c3c3;
+    -webkit-border-radius:0;
+    border-radius: 0;
 }
 .row-wrap textarea::-webkit-input-placeholder {
     font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
