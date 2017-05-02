@@ -170,6 +170,10 @@ a.btn-free-entry:hover,
                 -webkit-transition: all .25s ease-out;
                 transition: all .25s ease-out;
             }
+            .bodyWrapper:not(.mobileBodyWrapper) .banner-nav-list > li > a:not(.btn-free-entry):hover:before,
+            .bodyWrapper:not(.mobileBodyWrapper) .banner-nav-list > li > a:not(.btn-free-entry):focus:before {
+                bottom: 39px;
+            }
                 .banner-nav-list > li > a span {
                     display: block;
                     margin-top: 10px;
@@ -989,12 +993,12 @@ input {
         max-width: 100%;
         font-size: 22.5px;
         margin-top: 0;
-        padding: 14px 10px 12px 10px;
+        padding: 14px 10px 16px 10px;
         letter-spacing: -0.6px;
         border: none;
     }
     .mobileBodyWrapper .banner-nav-list > li > a:before {
-            bottom: 4px;
+            bottom: 6px;
             margin-right: -12px;
             width: 24px;
             height: 11px;
@@ -1027,12 +1031,13 @@ input {
         bottom: 0;
     }
     .mobileBodyWrapper .banner-nav-list {
-        width: calc(100% - 30px);
+        padding: 0 15px;
+        left: 0;
+        max-width: none;
     }
     .mobileBodyWrapper .banner-nav-list > li {
         float: none;
         width: 100%;
-        max-width: 233px;
     }
     .mobileBodyWrapper .banner-nav-list a.btn-free-entry:hover,
     .mobileBodyWrapper .banner-nav-list .btn-free-entry:hover {
