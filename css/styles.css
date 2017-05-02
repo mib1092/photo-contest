@@ -114,17 +114,14 @@ a.btn-free-entry:hover,
             float: left;
             width: 35%;
             text-align: center;
-            border-right: 1px solid rgba(255, 255, 255, 0.3);
         }
         .banner-nav-list > li:first-child {
             width: 30%;
         }
-        .banner-nav-list > li:last-child {
-            border-right: none;
-        }
             .banner-nav-list > li > a {
                 position: relative;
                 display: block;
+                margin-top: 20px;
                 padding: 32px 20px 45px;
                 font-family: 'BodoniBT-Book','Bodoni Bk BT','Bodoni MT',Didot,'Didot LT STD','Hoefler Text',Garamond,'Times New Roman',serif;
                 font-size: 35px;
@@ -134,9 +131,19 @@ a.btn-free-entry:hover,
                 text-decoration: none;
                 -webkit-transition: all .25s ease-out;
                 transition: all .25s ease-out;
+                border-right: 1px solid rgba(255, 255, 255, 0.3);
+            }
+            .banner-nav-list > li:last-child > a {
+                border-right: none;
+            }
+            .banner-nav-list > li > .btn-free-entry:hover,
+            .banner-nav-list > li > a.btn-free-entry:hover {
+                padding-bottom: 57px;
             }
 
             .banner-nav-list > li > a:hover {
+                margin-top: 0;
+                padding-bottom: 65px;
                 background-color: rgba(0, 0, 0, 0.8);
             }
             .banner-nav-list > li > a:before {
@@ -153,6 +160,11 @@ a.btn-free-entry:hover,
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
+                -webkit-transition: all .25s ease-out;
+                transition: all .25s ease-out;
+            }
+            .banner-nav-list > li > a:hover:before {
+                bottom: 39px;
             }
                 .banner-nav-list > li > a span {
                     display: block;
@@ -161,8 +173,11 @@ a.btn-free-entry:hover,
                     font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
                     font-weight: 500;
                     text-transform: uppercase;
-                    letter-spacing: 0;
+                    letter-spacing: 0.3px;
                 }
+            .banner-nav-list > li > a:after {
+
+            }
             .banner-nav-list .btn-free-entry,
             .banner-nav-list a.btn-free-entry {
                 font-size: 40px;
@@ -173,6 +188,8 @@ a.btn-free-entry:hover,
                 max-width: 100%;
                 color: #000;
                 background-color: rgba(255, 255, 255, 0.95);
+                -webkit-transition: all .25s ease-out;
+                transition: all .25s ease-out;
             }
             .banner-nav-list a.btn-free-entry:before,
             .banner-nav-list .btn-free-entry:before {
@@ -182,6 +199,12 @@ a.btn-free-entry:hover,
             .banner-nav-list .btn-free-entry:after {
                 right: 45px;
                 background-image: url(../img/next_arrow_b.png);
+                -webkit-transition: all .25s ease-out;
+                transition: all .25s ease-out;
+            }
+            .banner-nav-list > li > a.btn-free-entry:hover:after,
+            .banner-nav-list > li > .btn-free-entry:hover:after {
+                margin-top: -30px;
             }
             .banner-nav-list a.btn-free-entry:hover,
             .banner-nav-list .btn-free-entry:hover {
@@ -309,12 +332,14 @@ a.btn-free-entry:hover,
                     margin-bottom: 0;
                 }
             .how-title {
-                margin-bottom: 4px;
+                max-width: 280px;
+                margin: 0 auto 4px;
                 padding-bottom: 0;
                 font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
                 font-size: 20px;
                 font-weight: 700;
                 text-transform: uppercase;
+                letter-spacing: 1px;
             }
             .how-to-list > li .btn-free-entry {
                 margin-top: 9px;
@@ -390,9 +415,27 @@ a.btn-free-entry:hover,
     right: 0;
     background-image: url(../img/control_arrow.png);
 }
+.swiper-button-next:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: left ease-in 2s;
+}
+.custom-width .swiper-button-next:after {
+    right: 0;
+}
+.custom-width .swiper-button-next.swiper-button-white,
+.custom-width .swiper-container-rtl .swiper-button-prev.swiper-button-white {
+    background-color: rgba(0, 0, 0, 0.6);
+}
 .swiper-button-next span {
     position: absolute;
     display: block;
+    z-index: 99990;
     max-width: 100px;
     padding-top: 2px;
     top: 50%;
@@ -599,6 +642,7 @@ a.btn-free-entry:hover,
                 width: 100%;
                 height: 43px;
                 line-height: 43;
+                font-size: 16px;
             }
             .row-wrap label span {
                 font-size: 20px;
@@ -638,11 +682,18 @@ a.btn-free-entry:hover,
     color: #a7a7a7;
     background: #ffffff;
     border: 1px solid #c3c3c3;
+    font-size: 16px;
+}
+select option {
+    font-size: 16px;
 }
 input {
     -webkit-border-radius:0;
     border-radius: 0;
+    font-size: 16px;
 }
+
+
 .select-wrap { position:relative; }
 .select-wrap:after {
     content: '';
@@ -676,12 +727,14 @@ input {
     padding: 17px 20px;
     width: 100%;
     min-height: 150px;
+    font-size: 16px;
     resize: none;
     border: 1px solid #c3c3c3;
     -webkit-border-radius:0;
     border-radius: 0;
 }
 .row-wrap textarea::-webkit-input-placeholder {
+    font-size: 16px;
     font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
     color: #9f9f9f;
     font-weight: 400;
@@ -692,6 +745,7 @@ input {
     transition: 0.25s;
 }
 .row-wrap textarea::-moz-placeholder {
+    font-size: 16px;
     font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
     color: #9f9f9f;
     font-weight: 400;
@@ -702,6 +756,7 @@ input {
     transition: 0.25s;
 }
 .row-wrap textarea:-ms-input-placeholder {
+    font-size: 16px;
     font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
     color: #9f9f9f;
     font-weight: 400;
@@ -712,6 +767,7 @@ input {
     transition: 0.25s;
 }
 .row-wrap textarea:-moz-placeholder {
+    font-size: 16px;
     font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
     color: #9f9f9f;
     font-weight: 400;
@@ -722,6 +778,7 @@ input {
     transition: 0.25s;
 }
 .row-list input::-webkit-input-placeholder {
+    font-size: 16px;
     color: #9f9f9f;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -731,6 +788,7 @@ input {
     transition: 0.25s;
 }
 .row-list input::-moz-placeholder {
+    font-size: 16px;
     color: #9f9f9f;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -740,6 +798,7 @@ input {
     transition: 0.25s;
 }
 .row-list input:-ms-input-placeholder {
+    font-size: 16px;
     color: #9f9f9f;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -749,6 +808,7 @@ input {
     transition: 0.25s;
 }
 .row-list input:-moz-placeholder {
+    font-size: 16px;
     color: #9f9f9f;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -875,7 +935,7 @@ input {
 /*-------------------------------------RESPONSIVE---------------------------------------*/
 @media all and (max-width: 1400px), (max-height: 700px) {
     .banner-title {
-        margin-left: 20px;
+        /*margin-left: 20px;*/
         font-size: 95px;
     }
         .banner-title span {
@@ -926,7 +986,22 @@ input {
     .mobileBodyWrapper .mobile-hide {
         display: none;
     }
+    .mobileBodyWrapper .banner-nav-list > li > a {
+        max-width: 100%;
+        font-size: 22.5px;
+        padding: 14px 40px 12px 24px;
+        letter-spacing: -1.2px;
+    }
+    .banner-nav-list > li > a:before {
+        bottom: 3px;
+    }
 
+        .mobileBodyWrapper  .banner-nav-list > li > a span,
+        .mobileBodyWrapper  .banner-nav-list > li > a span {
+            font-size: 9px;
+            margin-top: -4px;
+            letter-spacing: 0.3px;
+        }
     .mobileBodyWrapper .banner-nav-list .btn-free-entry,
     .mobileBodyWrapper .banner-nav-list a.btn-free-entry {
         font-size: 22.5px;
@@ -944,10 +1019,10 @@ input {
         height: 400px;
     }
     .mobileBodyWrapper .sw-content .container {
-        padding-bottom: 100px;
+        padding-bottom: 220px;
     }
     .mobileBodyWrapper .sw-banner-nav {
-        bottom: 30px;
+        bottom: 0;
     }
     .mobileBodyWrapper .banner-nav-list {
         width: calc(100% - 30px);
