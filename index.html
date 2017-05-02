@@ -129,13 +129,13 @@
                                     <span>Deadline: July 31, 2017</span>
                                 </a>
                             </li>
-                            <li class="mobile-hide">
+                            <li>
                                 <a data-scroll href="#prizes-awards">
                                     Prizes &amp; Awards
                                     <span>web placement, publications &amp; trophies</span>
                                 </a>
                             </li>
-                            <li class="mobile-hide">
+                            <li>
                                 <a data-scroll href="#how-to-enter">
                                     How to Enter
                                     <span>Entry instructions, Judges &amp; MORE</span>
@@ -401,14 +401,21 @@
     <!-- Initialize Swiper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.min.js"></script>
     <script>
-        var swiper = new Swiper('.swiper-container', {
+        var sliderClass = $('.swiper-container'),
+            swiper = new Swiper(sliderClass, {
             //pagination: '.swiper-pagination',
             //paginationClickable: true,
+            speed: 400,
             slidesPerView: 'auto',
             nextButton: '.swiper-button-next',
             //prevButton: '.swiper-button-prev',
             spaceBetween: 0,
-            loop: true
+            loop: true,
+            onSlideChangeStart: function(slider) {
+                if (sliderClass.hasClass('custom-width')) {
+                    sliderClass.addClass('custom-active');
+                }
+            }
         });
     </script>
     <!-- END NEW SCRIPTS -->

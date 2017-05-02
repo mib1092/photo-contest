@@ -349,6 +349,7 @@ a.btn-free-entry:hover,
 .swiper-container {
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .swiper-slide {
     overflow: hidden;
@@ -362,7 +363,7 @@ a.btn-free-entry:hover,
     background-position: center;
     background-size: cover;
     background-color: #272727;
-    transition: transform 0.5s ease-in 0s;
+    transition: all 0.3s;
     background: none;
 }
 .no-js .swiper-slide {
@@ -384,6 +385,9 @@ a.btn-free-entry:hover,
 }
 .bodyWrapper:not(.mobileBodyWrapper) .custom-width .swiper-slide {
     transform: translate(-200px, 0);
+}
+.bodyWrapper:not(.mobileBodyWrapper) .custom-width:not(.custom-active) .swiper-slide-active {
+    transform: translate(0, 0);
 }
 
 .swiper-button-next,
@@ -414,6 +418,8 @@ a.btn-free-entry:hover,
 .swiper-container-rtl .swiper-button-prev.swiper-button-white {
     right: 0;
     background-image: url(../img/control_arrow.png);
+    background-color: transparent;
+    transition: background-color 0.3s ease-in 0s;
 }
 .swiper-button-next:after {
     position: absolute;
@@ -423,7 +429,7 @@ a.btn-free-entry:hover,
     top: 0;
     right: -100%;
     background-color: rgba(0, 0, 0, 0.6);
-    transition: left ease-in 2s;
+    transition: right 0.5s ease-in 2s;
 }
 .custom-width .swiper-button-next:after {
     right: 0;
