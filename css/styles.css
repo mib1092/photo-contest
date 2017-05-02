@@ -50,7 +50,6 @@ a.btn-free-entry:hover,
 .btn-free-entry:hover {
     background-color: #000000;
 }
-
 /*-------------------------------------CONTENT--------------------------------------*/
 .sw-content {
     position: absolute;
@@ -175,10 +174,10 @@ a.btn-free-entry:hover,
                     display: block;
                     margin-top: 10px;
                     font-size: 12px;
-                    font-family: 'BodoniBT-Book','Bodoni Bk BT','Bodoni MT',Didot,'Didot LT STD','Hoefler Text',Garamond,'Times New Roman',serif;
-                    font-weight: 400;
+                    font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
+                    font-weight: 500;
                     text-transform: uppercase;
-                    letter-spacing: 0.9px;
+                    letter-spacing: 0.4px;
                     color: #bbbbbb;
                 }
             .banner-nav-list > li > a:after {
@@ -990,16 +989,16 @@ input {
         max-width: 100%;
         font-size: 22.5px;
         margin-top: 0;
-        padding: 14px 14px 12px 14px;
+        padding: 14px 10px 12px 10px;
         letter-spacing: -0.6px;
+        border: none;
     }
-        .banner-nav-list > li > a:before {
+    .mobileBodyWrapper .banner-nav-list > li > a:before {
             bottom: 4px;
             margin-right: -12px;
             width: 24px;
             height: 11px;
         }
-        .mobileBodyWrapper  .banner-nav-list > li > a span,
         .mobileBodyWrapper  .banner-nav-list > li > a span {
             font-size: 9px;
             margin-top: -4px;
@@ -1044,7 +1043,7 @@ input {
         .mobileBodyWrapper .banner-nav-list a.btn-free-entry span {
             font-size: 9px;
             margin-top: -4px;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
         }
         .mobileBodyWrapper .banner-nav-list > li > a.btn-free-entry:hover:after,
         .mobileBodyWrapper .banner-nav-list > li > .btn-free-entry:hover:after  {
