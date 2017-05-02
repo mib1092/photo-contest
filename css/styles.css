@@ -358,7 +358,7 @@ a.btn-free-entry:hover,
 /*-------------------------------------SLIDER---------------------------------------*/
 .swiper-container {
     width: 100%;
-    height: 100%;
+    height: 100% !important;
     background-color: rgba(0, 0, 0, 0.6);
 }
 .swiper-slide {
@@ -978,8 +978,16 @@ input {
 .mobileBodyWrapper .custom-width .swiper-button-next span {
     display: none;
 }
+.mobileBodyWrapper .swiper-slide {
+    height: 100%;
+}
 .mobileBodyWrapper .banner-title {
     font-size: 62.5px;
+}
+@media all and (max-width: 420px)  {
+    .mobileBodyWrapper .banner-title {
+        font-size: 54px;
+    }
 }
     .mobileBodyWrapper .banner-title span {
         font-size: 29px;
@@ -1025,10 +1033,10 @@ input {
         height: 400px;
     }
     .mobileBodyWrapper .sw-content .container {
-        padding-bottom: 220px;
+        padding-bottom: 235px;
     }
     .mobileBodyWrapper .sw-banner-nav {
-        bottom: 0;
+        bottom: 15px;
     }
     .mobileBodyWrapper .banner-nav-list {
         padding: 0 15px;
