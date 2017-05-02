@@ -171,17 +171,15 @@ a.btn-free-entry:hover,
                 -webkit-transition: all .25s ease-out;
                 transition: all .25s ease-out;
             }
-            .banner-nav-list > li > a:hover:before {
-                bottom: 39px;
-            }
                 .banner-nav-list > li > a span {
                     display: block;
                     margin-top: 10px;
                     font-size: 12px;
-                    font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
-                    font-weight: 500;
+                    font-family: 'BodoniBT-Book','Bodoni Bk BT','Bodoni MT',Didot,'Didot LT STD','Hoefler Text',Garamond,'Times New Roman',serif;
+                    font-weight: 400;
                     text-transform: uppercase;
-                    letter-spacing: 0.3px;
+                    letter-spacing: 0.9px;
+                    color: #bbbbbb;
                 }
             .banner-nav-list > li > a:after {
 
@@ -222,6 +220,7 @@ a.btn-free-entry:hover,
                 .banner-nav-list a.btn-free-entry span {
                     margin-top: 10px;
                     letter-spacing: 1px;
+                    color: #8a8a8a;
                 }
 .section-awards {
     padding-top: 94px;
@@ -990,13 +989,16 @@ input {
     .mobileBodyWrapper .banner-nav-list > li > a {
         max-width: 100%;
         font-size: 22.5px;
-        padding: 14px 40px 12px 24px;
-        letter-spacing: -1.2px;
+        margin-top: 0;
+        padding: 14px 14px 12px 14px;
+        letter-spacing: -0.6px;
     }
-    .banner-nav-list > li > a:before {
-        bottom: 3px;
-    }
-
+        .banner-nav-list > li > a:before {
+            bottom: 4px;
+            margin-right: -12px;
+            width: 24px;
+            height: 11px;
+        }
         .mobileBodyWrapper  .banner-nav-list > li > a span,
         .mobileBodyWrapper  .banner-nav-list > li > a span {
             font-size: 9px;
@@ -1007,7 +1009,7 @@ input {
     .mobileBodyWrapper .banner-nav-list a.btn-free-entry {
         font-size: 22.5px;
         padding: 14px 40px 8px 24px;
-        letter-spacing: -1.2px;
+        letter-spacing: -0.2px;
         max-width: 100%;
         color: #000;
         background-color: rgba(255, 255, 255, 0.95);
@@ -1031,16 +1033,22 @@ input {
     .mobileBodyWrapper .banner-nav-list > li {
         float: none;
         width: 100%;
+        max-width: 233px;
     }
     .mobileBodyWrapper .banner-nav-list a.btn-free-entry:hover,
     .mobileBodyWrapper .banner-nav-list .btn-free-entry:hover {
+        padding-bottom: 8px;
         background-color: rgba(255, 255, 255, 1);
     }
         .mobileBodyWrapper .banner-nav-list .btn-free-entry span,
         .mobileBodyWrapper .banner-nav-list a.btn-free-entry span {
             font-size: 9px;
             margin-top: -4px;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
+        }
+        .mobileBodyWrapper .banner-nav-list > li > a.btn-free-entry:hover:after,
+        .mobileBodyWrapper .banner-nav-list > li > .btn-free-entry:hover:after  {
+            margin-top: -10px;
         }
     .mobileBodyWrapper .swiper-button-prev,
     .mobileBodyWrapper .swiper-container-rtl .swiper-button-next {
@@ -1051,7 +1059,7 @@ input {
         z-index: 99999;
         width: 42px;
         height: 66px;
-        top: 45px;
+        top: 42px;
         right: 5px;
         background-position: center;
         background-repeat: no-repeat;
@@ -1061,7 +1069,10 @@ input {
     .mobileBodyWrapper .swiper-button-prev:hover {
         background-color: rgba(0, 0, 0, .95);
     }
-
+.mobileBodyWrapper .swiper-button-next.swiper-button-white,
+.mobileBodyWrapper .swiper-container-rtl .swiper-button-prev.swiper-button-white {
+    background-size: 13px 25px;
+}
 .mobileBodyWrapper .section-awards {
     padding-top: 60px;
     padding-bottom: 20px;
