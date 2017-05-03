@@ -1229,3 +1229,42 @@ input {
 /* BRIAN STYLES */
 .headerWrap .center { max-width: 1370px; min-width: 980px; width: 100%; }
 .topNavCenter { position: absolute; top: 0; left: 50%; margin: 0 0 0 -488px;}
+
+.mobileBodyWrapper .sw-banner-nav {
+    bottom: 0;
+}
+.mobileBodyWrapper .banner-nav-list > li.mobile-bottom {
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+}
+.mobileBodyWrapper  .mobile-bottom.left {
+    left: 0;
+}
+.mobileBodyWrapper  .mobile-bottom.right {
+    right: 0;
+}
+.mobileBodyWrapper .banner-nav-list > li:not(.mobile-bottom) {
+    padding-bottom: 160px;
+}
+.banner-nav-list > li.mobile-bottom > a br {
+    display: none;
+}
+.mobileBodyWrapper .banner-nav-list > li.mobile-bottom > a br {
+    display: inline-block;
+}
+.mobileBodyWrapper .banner-nav-list > li.mobile-bottom > a {
+    padding-top: 28px;
+    padding-bottom: 42px;
+    font-size: 15px;
+    font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.mobileBodyWrapper .banner-nav-list > li.mobile-bottom > a:before {
+    bottom: 24px;
+}
+.mobileBodyWrapper  .banner-nav-list > li.mobile-bottom > a span {
+    display: none;
+}
