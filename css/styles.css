@@ -1072,7 +1072,7 @@ input {
         width: 42px;
         height: 66px;
         top: 42px;
-        right: 5px;
+        right: 0;
         background-position: center;
         background-repeat: no-repeat;
         background-color: rgba(0, 0, 0, .79);
