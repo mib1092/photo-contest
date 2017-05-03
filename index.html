@@ -403,20 +403,20 @@
     <script>
         var sliderClass = $('.swiper-container'),
             swiper = new Swiper(sliderClass, {
-            //pagination: '.swiper-pagination',
-            //paginationClickable: true,
-            speed: 400,
-            slidesPerView: 'auto',
-            nextButton: '.swiper-button-next',
-            //prevButton: '.swiper-button-prev',
-            spaceBetween: 0,
-            loop: true,
-            onSlideChangeStart: function(slider) {
-                if (sliderClass.hasClass('custom-width')) {
-                    sliderClass.addClass('custom-active');
+                //pagination: '.swiper-pagination',
+                //paginationClickable: true,
+                speed: 400,
+                slidesPerView: 'auto',
+                nextButton: '.swiper-button-next',
+                //prevButton: '.swiper-button-prev',
+                spaceBetween: 0,
+                loop: true,
+                onSlideChangeStart: function(slider) {
+                    if (sliderClass.hasClass('custom-width')) {
+                        sliderClass.addClass('custom-active');
+                    }
                 }
-            }
-        });
+            });
     </script>
     <!-- END NEW SCRIPTS -->
 
