@@ -980,6 +980,7 @@ input {
 }
 .mobileBodyWrapper .swiper-slide {
     height: 100%;
+    min-height: 500px;
 }
 .mobileBodyWrapper .banner-title {
     font-size: 62.5px;
@@ -1033,7 +1034,7 @@ input {
         height: 400px;
     }
     .mobileBodyWrapper .sw-content .container {
-        padding-bottom: 235px;
+        padding-bottom: 240px;
     }
     .mobileBodyWrapper .sw-banner-nav {
         bottom: 15px;
@@ -1226,10 +1227,6 @@ input {
             display: none;
         }
 
-/* BRIAN STYLES */
-.headerWrap .center { max-width: 1370px; min-width: 980px; width: 100%; }
-.topNavCenter { position: absolute; top: 0; left: 50%; margin: 0 0 0 -488px;}
-
 .mobileBodyWrapper .sw-banner-nav {
     bottom: 0;
 }
@@ -1255,12 +1252,13 @@ input {
 }
 .mobileBodyWrapper .banner-nav-list > li.mobile-bottom > a {
     padding-top: 28px;
-    padding-bottom: 42px;
+    padding-bottom: 48px;
     font-size: 15px;
     font-family: 'Raleway','Arial Narrow',Verdana,Arial,sans-serif;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.2;
+    letter-spacing: 1px;
 }
 .mobileBodyWrapper .banner-nav-list > li.mobile-bottom > a:before {
     bottom: 24px;
@@ -1268,3 +1266,7 @@ input {
 .mobileBodyWrapper  .banner-nav-list > li.mobile-bottom > a span {
     display: none;
 }
+
+/* BRIAN STYLES */
+.headerWrap .center { max-width: 1370px; min-width: 980px; width: 100%; }
+.topNavCenter { position: absolute; top: 0; left: 50%; margin: 0 0 0 -488px;}
